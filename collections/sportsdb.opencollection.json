@@ -1,0 +1,228 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "TheSportsDB API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-API-KEY",
+      "value": "{{premiumApiKey}}",
+      "in": "header"
+    }
+  },
+  "items": [
+    {
+      "info": { "name": "Search", "type": "folder" },
+      "items": [
+        {
+          "info": { "name": "Search for teams by name.", "type": "http" },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Arsenal"
+          },
+          "docs": "Search for teams by name. Free test key '3' in the path."
+        },
+        {
+          "info": { "name": "Search for players by name.", "type": "http" },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/3/searchplayers.php?p=Danny Welbeck"
+          },
+          "docs": "Search for players by name."
+        },
+        {
+          "info": { "name": "Search for events by name.", "type": "http" },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/3/searchevents.php?e=Arsenal_vs_Chelsea&s=2016-2017"
+          },
+          "docs": "Search for events by name, optionally filtered by season."
+        },
+        {
+          "info": { "name": "Search for venues by name.", "type": "http" },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/3/searchvenues.php?v=Wembley"
+          },
+          "docs": "Search for venues by name."
+        }
+      ]
+    },
+    {
+      "info": { "name": "Lookup", "type": "folder" },
+      "items": [
+        {
+          "info": { "name": "Look up league details by league ID.", "type": "http" },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/3/lookupleague.php?id=4328"
+          },
+          "docs": "Look up league details by idLeague."
+        },
+        {
+          "info": { "name": "Look up team details by team ID.", "type": "http" },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/3/lookupteam.php?id=133604"
+          },
+          "docs": "Look up team details by idTeam."
+        },
+        {
+          "info": { "name": "Look up player details by player ID.", "type": "http" },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/3/lookupplayer.php?id=34145937"
+          },
+          "docs": "Look up player details by idPlayer."
+        },
+        {
+          "info": { "name": "Look up event details by event ID.", "type": "http" },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/3/lookupevent.php?id=441613"
+          },
+          "docs": "Look up event details by idEvent."
+        },
+        {
+          "info": { "name": "Look up venue details by venue ID.", "type": "http" },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/3/lookupvenue.php?id=16163"
+          },
+          "docs": "Look up venue details by idVenue."
+        }
+      ]
+    },
+    {
+      "info": { "name": "Leagues", "type": "folder" },
+      "items": [
+        {
+          "info": { "name": "Look up the league table (standings) for a league and season.", "type": "http" },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/3/lookuptable.php?l=4328&s=2020-2021"
+          },
+          "docs": "League standings for a league and season."
+        },
+        {
+          "info": { "name": "List all sports.", "type": "http" },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/3/all_sports.php"
+          },
+          "docs": "List all sports."
+        },
+        {
+          "info": { "name": "List all countries.", "type": "http" },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/3/all_countries.php"
+          },
+          "docs": "List all countries."
+        },
+        {
+          "info": { "name": "List all leagues.", "type": "http" },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/3/all_leagues.php"
+          },
+          "docs": "List all leagues."
+        },
+        {
+          "info": { "name": "List all seasons for a league.", "type": "http" },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/3/search_all_seasons.php?id=4328"
+          },
+          "docs": "List all seasons for a league by idLeague."
+        }
+      ]
+    },
+    {
+      "info": { "name": "Events", "type": "folder" },
+      "items": [
+        {
+          "info": { "name": "Next five upcoming events for a team.", "type": "http" },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/3/eventsnext.php?id=133602"
+          },
+          "docs": "Next five upcoming events for a team by idTeam."
+        },
+        {
+          "info": { "name": "Last five results for a team.", "type": "http" },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/3/eventslast.php?id=133602"
+          },
+          "docs": "Last five results for a team by idTeam."
+        },
+        {
+          "info": { "name": "Events on a specific date.", "type": "http" },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/3/eventsday.php?d=2014-10-10&s=Soccer"
+          },
+          "docs": "Events on a specific date, optionally filtered by sport or league."
+        },
+        {
+          "info": { "name": "All events in a season for a league.", "type": "http" },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/3/eventsseason.php?id=4328&s=2014-2015"
+          },
+          "docs": "All events in a season for a league by idLeague."
+        },
+        {
+          "info": { "name": "Video highlights of events by date, league, or sport.", "type": "http" },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/3/eventshighlights.php?d=2023-12-09&l=4328"
+          },
+          "docs": "Video highlights of events by date, league, or sport."
+        }
+      ]
+    },
+    {
+      "info": { "name": "Teams", "type": "folder" },
+      "items": [
+        {
+          "info": { "name": "List all teams in a league or by sport and country.", "type": "http" },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/3/search_all_teams.php?l=English Premier League"
+          },
+          "docs": "List all teams in a league, or by sport and country."
+        }
+      ]
+    },
+    {
+      "info": { "name": "Players", "type": "folder" },
+      "items": [
+        {
+          "info": { "name": "List all players on a team.", "type": "http" },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/3/lookup_all_players.php?id=133604"
+          },
+          "docs": "List all players on a team by idTeam."
+        }
+      ]
+    },
+    {
+      "info": { "name": "Livescores", "type": "folder" },
+      "items": [
+        {
+          "info": { "name": "Premium V2 livescores for a sport, updated every 2 minutes.", "type": "http" },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v2/json/livescore/Soccer"
+          },
+          "docs": "Premium V2 livescores for a sport. Authenticate with the X-API-KEY header."
+        }
+      ]
+    }
+  ]
+}

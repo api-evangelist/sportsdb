@@ -1,0 +1,332 @@
+{
+  "info": {
+    "name": "TheSportsDB API",
+    "description": "REST API for TheSportsDB. V1 endpoints take the API key as a path segment (free test key \"3\"). The premium V2 livescore endpoint uses the X-API-KEY header.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://www.thesportsdb.com/api/v1/json"
+    },
+    {
+      "key": "apiKey",
+      "value": "3"
+    }
+  ],
+  "item": [
+    {
+      "name": "Search",
+      "item": [
+        {
+          "name": "Search for teams by name.",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/{{apiKey}}/searchteams.php?t=Arsenal",
+              "host": ["{{baseUrl}}"],
+              "path": ["{{apiKey}}", "searchteams.php"],
+              "query": [{ "key": "t", "value": "Arsenal" }]
+            }
+          }
+        },
+        {
+          "name": "Search for players by name.",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/{{apiKey}}/searchplayers.php?p=Danny Welbeck",
+              "host": ["{{baseUrl}}"],
+              "path": ["{{apiKey}}", "searchplayers.php"],
+              "query": [{ "key": "p", "value": "Danny Welbeck" }]
+            }
+          }
+        },
+        {
+          "name": "Search for events by name.",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/{{apiKey}}/searchevents.php?e=Arsenal_vs_Chelsea",
+              "host": ["{{baseUrl}}"],
+              "path": ["{{apiKey}}", "searchevents.php"],
+              "query": [
+                { "key": "e", "value": "Arsenal_vs_Chelsea" },
+                { "key": "s", "value": "2016-2017" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Search for venues by name.",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/{{apiKey}}/searchvenues.php?v=Wembley",
+              "host": ["{{baseUrl}}"],
+              "path": ["{{apiKey}}", "searchvenues.php"],
+              "query": [{ "key": "v", "value": "Wembley" }]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Lookup",
+      "item": [
+        {
+          "name": "Look up league details by league ID.",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/{{apiKey}}/lookupleague.php?id=4328",
+              "host": ["{{baseUrl}}"],
+              "path": ["{{apiKey}}", "lookupleague.php"],
+              "query": [{ "key": "id", "value": "4328" }]
+            }
+          }
+        },
+        {
+          "name": "Look up team details by team ID.",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/{{apiKey}}/lookupteam.php?id=133604",
+              "host": ["{{baseUrl}}"],
+              "path": ["{{apiKey}}", "lookupteam.php"],
+              "query": [{ "key": "id", "value": "133604" }]
+            }
+          }
+        },
+        {
+          "name": "Look up player details by player ID.",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/{{apiKey}}/lookupplayer.php?id=34145937",
+              "host": ["{{baseUrl}}"],
+              "path": ["{{apiKey}}", "lookupplayer.php"],
+              "query": [{ "key": "id", "value": "34145937" }]
+            }
+          }
+        },
+        {
+          "name": "Look up event details by event ID.",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/{{apiKey}}/lookupevent.php?id=441613",
+              "host": ["{{baseUrl}}"],
+              "path": ["{{apiKey}}", "lookupevent.php"],
+              "query": [{ "key": "id", "value": "441613" }]
+            }
+          }
+        },
+        {
+          "name": "Look up venue details by venue ID.",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/{{apiKey}}/lookupvenue.php?id=16163",
+              "host": ["{{baseUrl}}"],
+              "path": ["{{apiKey}}", "lookupvenue.php"],
+              "query": [{ "key": "id", "value": "16163" }]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Leagues",
+      "item": [
+        {
+          "name": "Look up the league table (standings) for a league and season.",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/{{apiKey}}/lookuptable.php?l=4328&s=2020-2021",
+              "host": ["{{baseUrl}}"],
+              "path": ["{{apiKey}}", "lookuptable.php"],
+              "query": [
+                { "key": "l", "value": "4328" },
+                { "key": "s", "value": "2020-2021" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "List all sports.",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/{{apiKey}}/all_sports.php",
+              "host": ["{{baseUrl}}"],
+              "path": ["{{apiKey}}", "all_sports.php"]
+            }
+          }
+        },
+        {
+          "name": "List all countries.",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/{{apiKey}}/all_countries.php",
+              "host": ["{{baseUrl}}"],
+              "path": ["{{apiKey}}", "all_countries.php"]
+            }
+          }
+        },
+        {
+          "name": "List all leagues.",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/{{apiKey}}/all_leagues.php",
+              "host": ["{{baseUrl}}"],
+              "path": ["{{apiKey}}", "all_leagues.php"]
+            }
+          }
+        },
+        {
+          "name": "List all seasons for a league.",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/{{apiKey}}/search_all_seasons.php?id=4328",
+              "host": ["{{baseUrl}}"],
+              "path": ["{{apiKey}}", "search_all_seasons.php"],
+              "query": [{ "key": "id", "value": "4328" }]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Events",
+      "item": [
+        {
+          "name": "Next five upcoming events for a team.",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/{{apiKey}}/eventsnext.php?id=133602",
+              "host": ["{{baseUrl}}"],
+              "path": ["{{apiKey}}", "eventsnext.php"],
+              "query": [{ "key": "id", "value": "133602" }]
+            }
+          }
+        },
+        {
+          "name": "Last five results for a team.",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/{{apiKey}}/eventslast.php?id=133602",
+              "host": ["{{baseUrl}}"],
+              "path": ["{{apiKey}}", "eventslast.php"],
+              "query": [{ "key": "id", "value": "133602" }]
+            }
+          }
+        },
+        {
+          "name": "Events on a specific date.",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/{{apiKey}}/eventsday.php?d=2014-10-10&s=Soccer",
+              "host": ["{{baseUrl}}"],
+              "path": ["{{apiKey}}", "eventsday.php"],
+              "query": [
+                { "key": "d", "value": "2014-10-10" },
+                { "key": "s", "value": "Soccer" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "All events in a season for a league.",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/{{apiKey}}/eventsseason.php?id=4328&s=2014-2015",
+              "host": ["{{baseUrl}}"],
+              "path": ["{{apiKey}}", "eventsseason.php"],
+              "query": [
+                { "key": "id", "value": "4328" },
+                { "key": "s", "value": "2014-2015" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Video highlights of events by date, league, or sport.",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/{{apiKey}}/eventshighlights.php?d=2023-12-09&l=4328",
+              "host": ["{{baseUrl}}"],
+              "path": ["{{apiKey}}", "eventshighlights.php"],
+              "query": [
+                { "key": "d", "value": "2023-12-09" },
+                { "key": "l", "value": "4328" }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Teams",
+      "item": [
+        {
+          "name": "List all teams in a league or by sport and country.",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/{{apiKey}}/search_all_teams.php?l=English Premier League",
+              "host": ["{{baseUrl}}"],
+              "path": ["{{apiKey}}", "search_all_teams.php"],
+              "query": [{ "key": "l", "value": "English Premier League" }]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Players",
+      "item": [
+        {
+          "name": "List all players on a team.",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/{{apiKey}}/lookup_all_players.php?id=133604",
+              "host": ["{{baseUrl}}"],
+              "path": ["{{apiKey}}", "lookup_all_players.php"],
+              "query": [{ "key": "id", "value": "133604" }]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Livescores",
+      "item": [
+        {
+          "name": "Premium V2 livescores for a sport, updated every 2 minutes.",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "X-API-KEY", "value": "{{premiumApiKey}}" }
+            ],
+            "url": {
+              "raw": "https://www.thesportsdb.com/api/v2/json/livescore/Soccer",
+              "host": ["https://www.thesportsdb.com"],
+              "path": ["api", "v2", "json", "livescore", "Soccer"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

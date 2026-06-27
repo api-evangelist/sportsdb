@@ -1,0 +1,68 @@
+aid: sportsdb
+name: TheSportsDB
+review:
+  question: Does TheSportsDB expose a documented public WebSocket API?
+  answer: false
+  date: '2026-06-25'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was created. TheSportsDB exposes only request/response
+    REST (HTTPS) endpoints. The premium V2 livescore endpoints are polled REST
+    resources refreshed roughly every two minutes; they are not a streaming,
+    Server-Sent Events, or WebSocket surface, so there is no event-driven
+    interface to model.
+findings:
+  summary: |
+    TheSportsDB does not publish a documented public WebSocket API. The platform
+    exposes a V1 JSON REST API at https://www.thesportsdb.com/api/v1/json with the
+    API key supplied as a path segment, and a premium V2 REST API at
+    https://www.thesportsdb.com/api/v2/json authenticated with an X-API-KEY header.
+    The V2 "livescore" endpoints are HTTP REST resources that clients poll (data
+    is refreshed about every two minutes), not a realtime push channel. No
+    WebSocket (ws:// or wss://) or Server-Sent Events endpoint is documented.
+  transports:
+    - protocol: REST
+      scheme: https
+      baseURL: https://www.thesportsdb.com/api/v1/json
+      documented: true
+    - protocol: REST
+      scheme: https
+      baseURL: https://www.thesportsdb.com/api/v2/json
+      note: Premium V2 endpoints including livescores; X-API-KEY header auth. Polled REST, not streaming.
+      documented: true
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented anywhere in TheSportsDB API documentation as of the review date.
+  endpointsConfirmedRest:
+    - GET https://www.thesportsdb.com/api/v1/json/{apiKey}/searchteams.php
+    - GET https://www.thesportsdb.com/api/v1/json/{apiKey}/searchplayers.php
+    - GET https://www.thesportsdb.com/api/v1/json/{apiKey}/searchevents.php
+    - GET https://www.thesportsdb.com/api/v1/json/{apiKey}/lookupteam.php
+    - GET https://www.thesportsdb.com/api/v1/json/{apiKey}/lookupplayer.php
+    - GET https://www.thesportsdb.com/api/v1/json/{apiKey}/lookupevent.php
+    - GET https://www.thesportsdb.com/api/v1/json/{apiKey}/lookuptable.php
+    - GET https://www.thesportsdb.com/api/v1/json/{apiKey}/all_leagues.php
+    - GET https://www.thesportsdb.com/api/v1/json/{apiKey}/eventsnext.php
+    - GET https://www.thesportsdb.com/api/v1/json/{apiKey}/eventsday.php
+    - GET https://www.thesportsdb.com/api/v1/json/{apiKey}/eventsseason.php
+    - GET https://www.thesportsdb.com/api/v1/json/{apiKey}/eventshighlights.php
+    - GET https://www.thesportsdb.com/api/v2/json/livescore/{strSport}
+  sources:
+    - url: https://www.thesportsdb.com/documentation
+      type: Documentation
+      note: Lists V1 (key in path) and V2 (X-API-KEY header) REST endpoints; no WebSocket mentioned.
+    - url: https://www.thesportsdb.com/free-api-documentation
+      type: APIReference
+      note: All documented endpoints are HTTPS REST request/response.
+    - url: https://www.thesportsdb.com/pricing
+      type: Documentation
+      note: Premium tiers add 2-minute livescores via the V2 REST API, not a push transport.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No WebSocket or event-driven streaming protocol surface exists. The V2
+    livescore endpoints are polled REST resources, so no AsyncAPI document was
+    authored. Only OpenAPI and collection artifacts were produced.

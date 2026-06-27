@@ -1,0 +1,119 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: TheSportsDB
+providerId: sportsdb
+created: '2026-06-25'
+modified: '2026-06-25'
+reconciled: true
+tags:
+- Sports
+- Sports Data
+- Plans
+- Subscription
+- Patreon
+description: >-
+  TheSportsDB offers a free, rate-limited sports API tier using a shared test
+  API key, plus paid subscription tiers that unlock the full premium JSON data,
+  the V2 API including 2-minute livescores and video highlight links, higher
+  data limits, higher rate limits, and a dedicated production API key. Paid
+  tiers are billed monthly (with annual and lifetime billing options) and have
+  historically been offered through Patreon.
+notes: >-
+  Verify current tier names, prices, and billing options on the TheSportsDB
+  pricing page; annual and lifetime pricing are offered but not itemized here.
+sources:
+- https://www.thesportsdb.com/pricing
+- https://www.thesportsdb.com/documentation
+plans:
+- id: sportsdb-free
+  name: Free
+  type: free
+  description: >-
+    Free V1 sports API using the shared test API key, with most queries limited
+    and a 30 requests/minute rate limit.
+  entries:
+  - label: API Requests
+    name: requests
+    type: rate
+    metric: requests
+    limit: 30
+    timeFrame: minute
+    geo: global
+    unit: 1
+    price: free
+    userMultiplied: false
+  elements:
+  - name: Search Teams, Players, Events, Venues
+  - name: Lookups by ID
+  - name: Leagues, Seasons, Standings
+  - name: Events and Schedules
+- id: sportsdb-single-developer
+  name: Single Developer
+  type: subscription
+  description: >-
+    Full premium JSON sports data, the V2 API with 2-minute livescores (Soccer,
+    NFL, NBA, MLB, NHL) and YouTube highlight links, higher data limits, and a
+    dedicated production API key.
+  entries:
+  - label: Monthly Subscription
+    name: single_developer
+    type: flat
+    metric: subscription
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $9 per month
+    userMultiplied: false
+  - label: API Requests
+    name: requests
+    type: rate
+    metric: requests
+    limit: 100
+    timeFrame: minute
+    geo: global
+    unit: 1
+    price: included
+    userMultiplied: false
+  elements:
+  - name: Full Premium JSON Data
+  - name: V2 API
+  - name: 2-Minute Livescores
+  - name: YouTube Highlight Links
+  - name: Dedicated Production API Key
+- id: sportsdb-small-business
+  name: Small Business
+  type: subscription
+  description: >-
+    All Single Developer features with no limit on returned data, a higher rate
+    limit, a private API key, and dedicated email support.
+  entries:
+  - label: Monthly Subscription
+    name: small_business
+    type: flat
+    metric: subscription
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $20 per month
+    userMultiplied: false
+  - label: API Requests
+    name: requests
+    type: rate
+    metric: requests
+    limit: 120
+    timeFrame: minute
+    geo: global
+    unit: 1
+    price: included
+    userMultiplied: false
+  elements:
+  - name: No Limit on Returned Data
+  - name: Private API Key
+  - name: Dedicated Email Support
+  - name: 2-Minute Livescores
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

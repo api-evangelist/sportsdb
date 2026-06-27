@@ -1,0 +1,168 @@
+aid: sportsdb
+url: https://raw.githubusercontent.com/api-evangelist/sportsdb/refs/heads/main/apis.yml
+name: TheSportsDB
+kind: company
+description: TheSportsDB is an open, crowd-sourced database of sports artwork and
+  metadata with a free REST API in JSON. It provides data on leagues, teams, players,
+  events, venues, schedules, and season standings across soccer, basketball, baseball,
+  American football, hockey, tennis, and many other sports worldwide, with premium
+  V2 livescores and video highlights for supporters.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Sports
+- Sports Data
+- Teams
+- Players
+- Events
+created: '2026-06-25'
+modified: '2026-06-25'
+specificationVersion: '0.19'
+apis:
+- aid: sportsdb:sportsdb-search-api
+  name: TheSportsDB Search API
+  tags:
+  - Search
+  - Teams
+  - Players
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.thesportsdb.com/documentation
+  baseURL: https://www.thesportsdb.com/api/v1/json
+  properties:
+  - url: https://www.thesportsdb.com/documentation
+    type: Documentation
+  - url: https://www.thesportsdb.com/free-api-documentation
+    type: APIReference
+  - url: openapi/sportsdb-openapi.yml
+    type: OpenAPI
+  - url: collections/sportsdb.postman_collection.json
+    type: PostmanCollection
+  - url: collections/sportsdb.opencollection.json
+    type: OpenCollection
+  description: Search across teams, players, events, venues, and filenames by name,
+    with the API key supplied as a path segment.
+- aid: sportsdb:sportsdb-lookups-api
+  name: TheSportsDB Lookups API
+  tags:
+  - Lookup
+  - Details
+  - Metadata
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.thesportsdb.com/documentation
+  baseURL: https://www.thesportsdb.com/api/v1/json
+  properties:
+  - url: https://www.thesportsdb.com/documentation
+    type: Documentation
+  - url: https://www.thesportsdb.com/free-api-documentation
+    type: APIReference
+  - url: openapi/sportsdb-openapi.yml
+    type: OpenAPI
+  - url: collections/sportsdb.postman_collection.json
+    type: PostmanCollection
+  - url: collections/sportsdb.opencollection.json
+    type: OpenCollection
+  description: Look up full details by ID for leagues, teams, players, events, venues,
+    equipment, honours, contracts, lineups, timelines, and stats.
+- aid: sportsdb:sportsdb-leagues-api
+  name: TheSportsDB Leagues API
+  tags:
+  - Leagues
+  - Seasons
+  - Standings
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.thesportsdb.com/documentation
+  baseURL: https://www.thesportsdb.com/api/v1/json
+  properties:
+  - url: https://www.thesportsdb.com/documentation
+    type: Documentation
+  - url: https://www.thesportsdb.com/free-api-documentation
+    type: APIReference
+  - url: openapi/sportsdb-openapi.yml
+    type: OpenAPI
+  - url: collections/sportsdb.postman_collection.json
+    type: PostmanCollection
+  - url: collections/sportsdb.opencollection.json
+    type: OpenCollection
+  description: List sports, countries, leagues, and seasons, and retrieve league tables
+    (standings) for a given league and season.
+- aid: sportsdb:sportsdb-events-api
+  name: TheSportsDB Events & Schedules API
+  tags:
+  - Events
+  - Schedules
+  - Fixtures
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.thesportsdb.com/documentation
+  baseURL: https://www.thesportsdb.com/api/v1/json
+  properties:
+  - url: https://www.thesportsdb.com/documentation
+    type: Documentation
+  - url: https://www.thesportsdb.com/free-api-documentation
+    type: APIReference
+  - url: openapi/sportsdb-openapi.yml
+    type: OpenAPI
+  - url: collections/sportsdb.postman_collection.json
+    type: PostmanCollection
+  - url: collections/sportsdb.opencollection.json
+    type: OpenCollection
+  description: Retrieve past and upcoming events by team or league, events by date,
+    season schedules, TV schedules, and video highlights.
+- aid: sportsdb:sportsdb-livescores-api
+  name: TheSportsDB Livescores API
+  tags:
+  - Livescores
+  - Realtime
+  - Premium
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.thesportsdb.com/documentation
+  baseURL: https://www.thesportsdb.com/api/v2/json
+  properties:
+  - url: https://www.thesportsdb.com/documentation
+    type: Documentation
+  - url: https://www.thesportsdb.com/free-api-documentation
+    type: APIReference
+  - url: openapi/sportsdb-openapi.yml
+    type: OpenAPI
+  - url: collections/sportsdb.postman_collection.json
+    type: PostmanCollection
+  - url: collections/sportsdb.opencollection.json
+    type: OpenCollection
+  description: Premium V2 livescores updated every 2 minutes by sport, league, or all,
+    authenticated with an API key in the X-API-KEY header.
+- aid: sportsdb:sportsdb-players-teams-api
+  name: TheSportsDB Players & Teams API
+  tags:
+  - Players
+  - Teams
+  - Rosters
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.thesportsdb.com/documentation
+  baseURL: https://www.thesportsdb.com/api/v1/json
+  properties:
+  - url: https://www.thesportsdb.com/documentation
+    type: Documentation
+  - url: https://www.thesportsdb.com/free-api-documentation
+    type: APIReference
+  - url: openapi/sportsdb-openapi.yml
+    type: OpenAPI
+  - url: collections/sportsdb.postman_collection.json
+    type: PostmanCollection
+  - url: collections/sportsdb.opencollection.json
+    type: OpenCollection
+  description: List all teams in a league or sport/country and all players on a team,
+    plus per-player results, statistics, and career history.
+common:
+- type: LinkedIn
+  url: https://www.linkedin.com/company/thesportsdb
+- type: Website
+  url: https://www.thesportsdb.com
+- type: Documentation
+  url: https://www.thesportsdb.com/documentation
+- type: Plans
+  url: plans/sportsdb-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/sportsdb-rate-limits.yml
+- type: FinOps
+  url: finops/sportsdb-finops.yml
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

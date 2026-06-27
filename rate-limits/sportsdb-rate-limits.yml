@@ -1,0 +1,58 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: TheSportsDB
+providerId: sportsdb
+created: '2026-06-25'
+modified: '2026-06-25'
+reconciled: true
+tags:
+- Sports
+- Sports Data
+- Rate Limiting
+- Quotas
+- Throttling
+description: >-
+  TheSportsDB enforces per-minute request rate limits that vary by subscription
+  tier: 30 requests/minute on the Free tier, 100 requests/minute on the Single
+  Developer tier, and 120 requests/minute on the Small Business tier. Exceeding
+  the limit returns HTTP 429 and clients must wait one minute before resuming.
+  Many V1 endpoints additionally cap the number of records returned on the Free
+  tier; premium tiers raise or remove those data limits.
+notes: >-
+  Per-endpoint free record caps are documented inline in the API reference;
+  confirm current per-tier limits on the TheSportsDB pricing page.
+sources:
+- https://www.thesportsdb.com/pricing
+- https://www.thesportsdb.com/documentation
+responseCodes:
+  throttled: 429
+limits:
+- name: Free Tier Requests Per Minute
+  scope: account
+  metric: requests
+  limit: 30
+  notes: Free shared test key; most queries return a limited number of records.
+- name: Single Developer Requests Per Minute
+  scope: account
+  metric: requests
+  limit: 100
+  notes: Paid $9/month tier with full premium data and higher data limits.
+- name: Small Business Requests Per Minute
+  scope: account
+  metric: requests
+  limit: 120
+  notes: Paid $20/month tier with no limit on returned data and a private key.
+- name: Per-Endpoint Free Record Caps
+  scope: endpoint
+  metric: records
+  limit: see provider documentation
+  notes: Free tier caps records per endpoint (e.g. searches limited to 1, lists higher); premium raises these.
+policies:
+- name: Tiered Limits
+  description: Rate and data limits increase across Free, Single Developer, and Small Business tiers.
+- name: Retry After Throttle
+  description: On HTTP 429, clients must wait one minute before resuming requests.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
