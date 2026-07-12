@@ -1,0 +1,16 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/sportsdb-openapi.yml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: ApiKeyHeader
+  type: apiKey
+  in: header
+  parameter: X-API-KEY
+  description: Premium V2 API key supplied in the X-API-KEY request header.
+  sources:
+  - openapi/sportsdb-openapi.yml
