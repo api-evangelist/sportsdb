@@ -151,6 +151,8 @@ apis:
   description: List all teams in a league or sport/country and all players on a team,
     plus per-player results, statistics, and career history.
 common:
+- type: AgenticAccess
+  url: agentic-access/sportsdb-agentic-access.yml
 - type: DomainSecurity
   url: security/sportsdb-domain-security.yml
 - type: Authentication

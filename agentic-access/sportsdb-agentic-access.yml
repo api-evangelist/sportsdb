@@ -1,0 +1,234 @@
+generated: '2026-07-15'
+method: generated
+source: openapi/sportsdb-openapi.yml
+description: Recommended x-agentic-access execution contracts, classified heuristically from
+  the OpenAPI. A governance starting point for exposing this API to AI agents — review and bind
+  audience per deployment. See research/curity/agentic-governance/.
+summary:
+  operations: 22
+  by_action_class:
+    connected: 22
+  by_consequence:
+    read: 22
+  human_in_the_loop_required: 0
+operations:
+- path: /{apiKey}/searchteams.php
+  method: get
+  operationId: searchTeams
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /{apiKey}/searchplayers.php
+  method: get
+  operationId: searchPlayers
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /{apiKey}/searchevents.php
+  method: get
+  operationId: searchEvents
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /{apiKey}/searchvenues.php
+  method: get
+  operationId: searchVenues
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /{apiKey}/lookupleague.php
+  method: get
+  operationId: lookupLeague
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /{apiKey}/lookupteam.php
+  method: get
+  operationId: lookupTeam
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /{apiKey}/lookupplayer.php
+  method: get
+  operationId: lookupPlayer
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /{apiKey}/lookupevent.php
+  method: get
+  operationId: lookupEvent
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /{apiKey}/lookupvenue.php
+  method: get
+  operationId: lookupVenue
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /{apiKey}/lookuptable.php
+  method: get
+  operationId: lookupTable
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /{apiKey}/all_sports.php
+  method: get
+  operationId: allSports
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /{apiKey}/all_countries.php
+  method: get
+  operationId: allCountries
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /{apiKey}/all_leagues.php
+  method: get
+  operationId: allLeagues
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /{apiKey}/search_all_seasons.php
+  method: get
+  operationId: searchAllSeasons
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /{apiKey}/search_all_teams.php
+  method: get
+  operationId: searchAllTeams
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /{apiKey}/lookup_all_players.php
+  method: get
+  operationId: lookupAllPlayers
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /{apiKey}/eventsnext.php
+  method: get
+  operationId: eventsNext
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /{apiKey}/eventslast.php
+  method: get
+  operationId: eventsLast
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /{apiKey}/eventsday.php
+  method: get
+  operationId: eventsDay
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /{apiKey}/eventsseason.php
+  method: get
+  operationId: eventsSeason
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /{apiKey}/eventshighlights.php
+  method: get
+  operationId: eventsHighlights
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /livescore/{strSport}
+  method: get
+  operationId: livescoreBySport
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
