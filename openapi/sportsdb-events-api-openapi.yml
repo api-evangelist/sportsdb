@@ -1,0 +1,178 @@
+openapi: 3.0.1
+info:
+  title: TheSportsDB Events API
+  description: REST API for TheSportsDB, an open, crowd-sourced database of sports artwork and metadata. The V1 API returns JSON for searches, lookups, leagues, players, teams, events, schedules, and video highlights, with the API key supplied as a path segment. The free test key is "3" (also documented as "123"). Premium V2 endpoints (livescores) authenticate with an API key in the X-API-KEY header.
+  termsOfService: https://www.thesportsdb.com/
+  contact:
+    name: TheSportsDB
+    url: https://www.thesportsdb.com/documentation
+  version: '1.0'
+servers:
+- url: https://www.thesportsdb.com/api/v1/json
+  description: V1 REST API; append the API key as the next path segment (e.g. /3/).
+tags:
+- name: Events
+paths:
+  /{apiKey}/eventsnext.php:
+    get:
+      operationId: eventsNext
+      tags:
+      - Events
+      summary: Next five upcoming events for a team.
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      - name: id
+        in: query
+        required: true
+        description: Team ID (idTeam).
+        schema:
+          type: string
+          example: '133602'
+      responses:
+        '200':
+          description: Upcoming events.
+          content:
+            application/json:
+              schema:
+                type: object
+  /{apiKey}/eventslast.php:
+    get:
+      operationId: eventsLast
+      tags:
+      - Events
+      summary: Last five results for a team.
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      - name: id
+        in: query
+        required: true
+        description: Team ID (idTeam).
+        schema:
+          type: string
+          example: '133602'
+      responses:
+        '200':
+          description: Recent results.
+          content:
+            application/json:
+              schema:
+                type: object
+  /{apiKey}/eventsday.php:
+    get:
+      operationId: eventsDay
+      tags:
+      - Events
+      summary: Events on a specific date.
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      - name: d
+        in: query
+        required: true
+        description: Date of events (YYYY-MM-DD).
+        schema:
+          type: string
+          format: date
+          example: '2014-10-10'
+      - name: s
+        in: query
+        required: false
+        description: Sport filter (strSport).
+        schema:
+          type: string
+          example: Soccer
+      - name: l
+        in: query
+        required: false
+        description: League ID filter (idLeague).
+        schema:
+          type: string
+          example: '4328'
+      responses:
+        '200':
+          description: Events on the date.
+          content:
+            application/json:
+              schema:
+                type: object
+  /{apiKey}/eventsseason.php:
+    get:
+      operationId: eventsSeason
+      tags:
+      - Events
+      summary: All events in a season for a league.
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      - name: id
+        in: query
+        required: true
+        description: League ID (idLeague).
+        schema:
+          type: string
+          example: '4328'
+      - name: s
+        in: query
+        required: false
+        description: Season.
+        schema:
+          type: string
+          example: 2014-2015
+      responses:
+        '200':
+          description: Season events.
+          content:
+            application/json:
+              schema:
+                type: object
+  /{apiKey}/eventshighlights.php:
+    get:
+      operationId: eventsHighlights
+      tags:
+      - Events
+      summary: Video highlights of events by date, league, or sport.
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      - name: d
+        in: query
+        required: false
+        description: Date of events (YYYY-MM-DD).
+        schema:
+          type: string
+          format: date
+          example: '2023-12-09'
+      - name: l
+        in: query
+        required: false
+        description: League ID (idLeague).
+        schema:
+          type: string
+          example: '4328'
+      - name: s
+        in: query
+        required: false
+        description: Sport (strSport).
+        schema:
+          type: string
+          example: Soccer
+      responses:
+        '200':
+          description: Event highlights.
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  parameters:
+    ApiKey:
+      name: apiKey
+      in: path
+      required: true
+      description: API key path segment. The free test key is "3" (also documented as "123").
+      schema:
+        type: string
+        default: '3'
+  securitySchemes:
+    ApiKeyHeader:
+      type: apiKey
+      in: header
+      name: X-API-KEY
+      description: Premium V2 API key supplied in the X-API-KEY request header.

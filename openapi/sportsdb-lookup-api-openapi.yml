@@ -1,0 +1,141 @@
+openapi: 3.0.1
+info:
+  title: TheSportsDB Events Lookup API
+  description: REST API for TheSportsDB, an open, crowd-sourced database of sports artwork and metadata. The V1 API returns JSON for searches, lookups, leagues, players, teams, events, schedules, and video highlights, with the API key supplied as a path segment. The free test key is "3" (also documented as "123"). Premium V2 endpoints (livescores) authenticate with an API key in the X-API-KEY header.
+  termsOfService: https://www.thesportsdb.com/
+  contact:
+    name: TheSportsDB
+    url: https://www.thesportsdb.com/documentation
+  version: '1.0'
+servers:
+- url: https://www.thesportsdb.com/api/v1/json
+  description: V1 REST API; append the API key as the next path segment (e.g. /3/).
+tags:
+- name: Lookup
+paths:
+  /{apiKey}/lookupleague.php:
+    get:
+      operationId: lookupLeague
+      tags:
+      - Lookup
+      summary: Look up league details by league ID.
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      - name: id
+        in: query
+        required: true
+        description: League ID (idLeague).
+        schema:
+          type: string
+          example: '4328'
+      responses:
+        '200':
+          description: League details.
+          content:
+            application/json:
+              schema:
+                type: object
+  /{apiKey}/lookupteam.php:
+    get:
+      operationId: lookupTeam
+      tags:
+      - Lookup
+      summary: Look up team details by team ID.
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      - name: id
+        in: query
+        required: true
+        description: Team ID (idTeam).
+        schema:
+          type: string
+          example: '133604'
+      responses:
+        '200':
+          description: Team details.
+          content:
+            application/json:
+              schema:
+                type: object
+  /{apiKey}/lookupplayer.php:
+    get:
+      operationId: lookupPlayer
+      tags:
+      - Lookup
+      summary: Look up player details by player ID.
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      - name: id
+        in: query
+        required: true
+        description: Player ID (idPlayer).
+        schema:
+          type: string
+          example: '34145937'
+      responses:
+        '200':
+          description: Player details.
+          content:
+            application/json:
+              schema:
+                type: object
+  /{apiKey}/lookupevent.php:
+    get:
+      operationId: lookupEvent
+      tags:
+      - Lookup
+      summary: Look up event details by event ID.
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      - name: id
+        in: query
+        required: true
+        description: Event ID (idEvent).
+        schema:
+          type: string
+          example: '441613'
+      responses:
+        '200':
+          description: Event details.
+          content:
+            application/json:
+              schema:
+                type: object
+  /{apiKey}/lookupvenue.php:
+    get:
+      operationId: lookupVenue
+      tags:
+      - Lookup
+      summary: Look up venue details by venue ID.
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      - name: id
+        in: query
+        required: true
+        description: Venue ID (idVenue).
+        schema:
+          type: string
+          example: '16163'
+      responses:
+        '200':
+          description: Venue details.
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  parameters:
+    ApiKey:
+      name: apiKey
+      in: path
+      required: true
+      description: API key path segment. The free test key is "3" (also documented as "123").
+      schema:
+        type: string
+        default: '3'
+  securitySchemes:
+    ApiKeyHeader:
+      type: apiKey
+      in: header
+      name: X-API-KEY
+      description: Premium V2 API key supplied in the X-API-KEY request header.

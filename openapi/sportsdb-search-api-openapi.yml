@@ -1,0 +1,126 @@
+openapi: 3.0.1
+info:
+  title: TheSportsDB Events Search API
+  description: REST API for TheSportsDB, an open, crowd-sourced database of sports artwork and metadata. The V1 API returns JSON for searches, lookups, leagues, players, teams, events, schedules, and video highlights, with the API key supplied as a path segment. The free test key is "3" (also documented as "123"). Premium V2 endpoints (livescores) authenticate with an API key in the X-API-KEY header.
+  termsOfService: https://www.thesportsdb.com/
+  contact:
+    name: TheSportsDB
+    url: https://www.thesportsdb.com/documentation
+  version: '1.0'
+servers:
+- url: https://www.thesportsdb.com/api/v1/json
+  description: V1 REST API; append the API key as the next path segment (e.g. /3/).
+tags:
+- name: Search
+paths:
+  /{apiKey}/searchteams.php:
+    get:
+      operationId: searchTeams
+      tags:
+      - Search
+      summary: Search for teams by name.
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      - name: t
+        in: query
+        required: true
+        description: Team name to search for.
+        schema:
+          type: string
+          example: Arsenal
+      responses:
+        '200':
+          description: Matching teams.
+          content:
+            application/json:
+              schema:
+                type: object
+  /{apiKey}/searchplayers.php:
+    get:
+      operationId: searchPlayers
+      tags:
+      - Search
+      summary: Search for players by name.
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      - name: p
+        in: query
+        required: true
+        description: Player name to search for.
+        schema:
+          type: string
+          example: Danny Welbeck
+      responses:
+        '200':
+          description: Matching players.
+          content:
+            application/json:
+              schema:
+                type: object
+  /{apiKey}/searchevents.php:
+    get:
+      operationId: searchEvents
+      tags:
+      - Search
+      summary: Search for events by name.
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      - name: e
+        in: query
+        required: true
+        description: Event name to search for.
+        schema:
+          type: string
+          example: Arsenal_vs_Chelsea
+      - name: s
+        in: query
+        required: false
+        description: Season filter.
+        schema:
+          type: string
+          example: 2016-2017
+      responses:
+        '200':
+          description: Matching events.
+          content:
+            application/json:
+              schema:
+                type: object
+  /{apiKey}/searchvenues.php:
+    get:
+      operationId: searchVenues
+      tags:
+      - Search
+      summary: Search for venues by name.
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      - name: v
+        in: query
+        required: true
+        description: Venue name to search for.
+        schema:
+          type: string
+          example: Wembley
+      responses:
+        '200':
+          description: Matching venues.
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  parameters:
+    ApiKey:
+      name: apiKey
+      in: path
+      required: true
+      description: API key path segment. The free test key is "3" (also documented as "123").
+      schema:
+        type: string
+        default: '3'
+  securitySchemes:
+    ApiKeyHeader:
+      type: apiKey
+      in: header
+      name: X-API-KEY
+      description: Premium V2 API key supplied in the X-API-KEY request header.

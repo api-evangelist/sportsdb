@@ -1,0 +1,50 @@
+openapi: 3.0.1
+info:
+  title: TheSportsDB Events Livescores API
+  description: REST API for TheSportsDB, an open, crowd-sourced database of sports artwork and metadata. The V1 API returns JSON for searches, lookups, leagues, players, teams, events, schedules, and video highlights, with the API key supplied as a path segment. The free test key is "3" (also documented as "123"). Premium V2 endpoints (livescores) authenticate with an API key in the X-API-KEY header.
+  termsOfService: https://www.thesportsdb.com/
+  contact:
+    name: TheSportsDB
+    url: https://www.thesportsdb.com/documentation
+  version: '1.0'
+servers:
+- url: https://www.thesportsdb.com/api/v1/json
+  description: V1 REST API; append the API key as the next path segment (e.g. /3/).
+tags:
+- name: Livescores
+paths:
+  /livescore/{strSport}:
+    servers:
+    - url: https://www.thesportsdb.com/api/v2/json
+      description: Premium V2 API; authenticate with the X-API-KEY header.
+    get:
+      operationId: livescoreBySport
+      tags:
+      - Livescores
+      summary: Premium V2 livescores for a sport, updated every 2 minutes.
+      security:
+      - ApiKeyHeader: []
+      parameters:
+      - name: strSport
+        in: path
+        required: true
+        description: Sport name (e.g. Soccer, Basketball).
+        schema:
+          type: string
+          example: Soccer
+      responses:
+        '200':
+          description: Live scores for the sport.
+          content:
+            application/json:
+              schema:
+                type: object
+        '401':
+          description: Missing or invalid premium API key.
+components:
+  securitySchemes:
+    ApiKeyHeader:
+      type: apiKey
+      in: header
+      name: X-API-KEY
+      description: Premium V2 API key supplied in the X-API-KEY request header.

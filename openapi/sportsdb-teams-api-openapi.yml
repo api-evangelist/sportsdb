@@ -1,0 +1,67 @@
+openapi: 3.0.1
+info:
+  title: TheSportsDB Events Teams API
+  description: REST API for TheSportsDB, an open, crowd-sourced database of sports artwork and metadata. The V1 API returns JSON for searches, lookups, leagues, players, teams, events, schedules, and video highlights, with the API key supplied as a path segment. The free test key is "3" (also documented as "123"). Premium V2 endpoints (livescores) authenticate with an API key in the X-API-KEY header.
+  termsOfService: https://www.thesportsdb.com/
+  contact:
+    name: TheSportsDB
+    url: https://www.thesportsdb.com/documentation
+  version: '1.0'
+servers:
+- url: https://www.thesportsdb.com/api/v1/json
+  description: V1 REST API; append the API key as the next path segment (e.g. /3/).
+tags:
+- name: Teams
+paths:
+  /{apiKey}/search_all_teams.php:
+    get:
+      operationId: searchAllTeams
+      tags:
+      - Teams
+      summary: List all teams in a league or by sport and country.
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      - name: l
+        in: query
+        required: false
+        description: League name (strLeague).
+        schema:
+          type: string
+          example: English Premier League
+      - name: s
+        in: query
+        required: false
+        description: Sport (strSport).
+        schema:
+          type: string
+          example: Soccer
+      - name: c
+        in: query
+        required: false
+        description: Country (strCountry).
+        schema:
+          type: string
+          example: Spain
+      responses:
+        '200':
+          description: List of teams.
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  parameters:
+    ApiKey:
+      name: apiKey
+      in: path
+      required: true
+      description: API key path segment. The free test key is "3" (also documented as "123").
+      schema:
+        type: string
+        default: '3'
+  securitySchemes:
+    ApiKeyHeader:
+      type: apiKey
+      in: header
+      name: X-API-KEY
+      description: Premium V2 API key supplied in the X-API-KEY request header.

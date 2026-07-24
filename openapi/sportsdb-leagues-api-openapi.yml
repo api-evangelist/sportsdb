@@ -1,0 +1,127 @@
+openapi: 3.0.1
+info:
+  title: TheSportsDB Events Leagues API
+  description: REST API for TheSportsDB, an open, crowd-sourced database of sports artwork and metadata. The V1 API returns JSON for searches, lookups, leagues, players, teams, events, schedules, and video highlights, with the API key supplied as a path segment. The free test key is "3" (also documented as "123"). Premium V2 endpoints (livescores) authenticate with an API key in the X-API-KEY header.
+  termsOfService: https://www.thesportsdb.com/
+  contact:
+    name: TheSportsDB
+    url: https://www.thesportsdb.com/documentation
+  version: '1.0'
+servers:
+- url: https://www.thesportsdb.com/api/v1/json
+  description: V1 REST API; append the API key as the next path segment (e.g. /3/).
+tags:
+- name: Leagues
+paths:
+  /{apiKey}/lookuptable.php:
+    get:
+      operationId: lookupTable
+      tags:
+      - Leagues
+      summary: Look up the league table (standings) for a league and season.
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      - name: l
+        in: query
+        required: true
+        description: League ID (idLeague).
+        schema:
+          type: string
+          example: '4328'
+      - name: s
+        in: query
+        required: true
+        description: Season.
+        schema:
+          type: string
+          example: 2020-2021
+      responses:
+        '200':
+          description: League standings.
+          content:
+            application/json:
+              schema:
+                type: object
+  /{apiKey}/all_sports.php:
+    get:
+      operationId: allSports
+      tags:
+      - Leagues
+      summary: List all sports.
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: List of sports.
+          content:
+            application/json:
+              schema:
+                type: object
+  /{apiKey}/all_countries.php:
+    get:
+      operationId: allCountries
+      tags:
+      - Leagues
+      summary: List all countries.
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: List of countries.
+          content:
+            application/json:
+              schema:
+                type: object
+  /{apiKey}/all_leagues.php:
+    get:
+      operationId: allLeagues
+      tags:
+      - Leagues
+      summary: List all leagues.
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: List of leagues.
+          content:
+            application/json:
+              schema:
+                type: object
+  /{apiKey}/search_all_seasons.php:
+    get:
+      operationId: searchAllSeasons
+      tags:
+      - Leagues
+      summary: List all seasons for a league.
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      - name: id
+        in: query
+        required: true
+        description: League ID (idLeague).
+        schema:
+          type: string
+          example: '4328'
+      responses:
+        '200':
+          description: List of seasons.
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  parameters:
+    ApiKey:
+      name: apiKey
+      in: path
+      required: true
+      description: API key path segment. The free test key is "3" (also documented as "123").
+      schema:
+        type: string
+        default: '3'
+  securitySchemes:
+    ApiKeyHeader:
+      type: apiKey
+      in: header
+      name: X-API-KEY
+      description: Premium V2 API key supplied in the X-API-KEY request header.
