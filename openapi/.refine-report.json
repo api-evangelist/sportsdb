@@ -1,0 +1,26 @@
+{
+  "provider": "sportsdb",
+  "sources": [
+    "sportsdb-events-api-openapi.yml",
+    "sportsdb-leagues-api-openapi.yml",
+    "sportsdb-livescores-api-openapi.yml",
+    "sportsdb-lookup-api-openapi.yml",
+    "sportsdb-players-api-openapi.yml",
+    "sportsdb-search-api-openapi.yml",
+    "sportsdb-teams-api-openapi.yml"
+  ],
+  "outputs": [
+    "sportsdb-events-api-openapi.yml",
+    "sportsdb-leagues-api-openapi.yml",
+    "sportsdb-livescores-api-openapi.yml",
+    "sportsdb-lookup-api-openapi.yml",
+    "sportsdb-players-api-openapi.yml",
+    "sportsdb-search-api-openapi.yml",
+    "sportsdb-teams-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
