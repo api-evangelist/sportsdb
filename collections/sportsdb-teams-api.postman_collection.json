@@ -1,0 +1,149 @@
+{
+  "item": [
+    {
+      "id": "1e0644b9-a7c7-461f-9fb1-74f86971eb84",
+      "name": "Teams",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "cf864d34-dcfc-4115-8e31-f28ea35bce51",
+          "name": "List all teams in a league or by sport and country.",
+          "request": {
+            "name": "List all teams in a league or by sport and country.",
+            "description": {},
+            "url": {
+              "path": [
+                ":apiKey",
+                "search_all_teams.php"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "l",
+                  "value": "<string>",
+                  "description": "League name (strLeague)."
+                },
+                {
+                  "disabled": false,
+                  "key": "s",
+                  "value": "<string>",
+                  "description": "Sport (strSport)."
+                },
+                {
+                  "disabled": false,
+                  "key": "c",
+                  "value": "<string>",
+                  "description": "Country (strCountry)."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "3",
+                  "key": "apiKey",
+                  "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c0c3b35d-200f-47ba-95f1-6521f39c16e3",
+              "name": "List of teams.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":apiKey",
+                    "search_all_teams.php"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "l",
+                      "value": "English Premier League"
+                    },
+                    {
+                      "key": "s",
+                      "value": "Soccer"
+                    },
+                    {
+                      "key": "c",
+                      "value": "Spain"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "3",
+                      "key": "apiKey",
+                      "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.thesportsdb.com/api/v1/json",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "a1f8ea24-5597-46ab-add0-5c479703ae72",
+    "name": "TheSportsDB Events Teams API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for TheSportsDB, an open, crowd-sourced database of sports artwork and metadata. The V1 API returns JSON for searches, lookups, leagues, players, teams, events, schedules, and video highlights, with the API key supplied as a path segment. The free test key is \"3\" (also documented as \"123\"). Premium V2 endpoints (livescores) authenticate with an API key in the X-API-KEY header.\n\nContact Support:\n Name: TheSportsDB",
+      "type": "text/plain"
+    }
+  }
+}

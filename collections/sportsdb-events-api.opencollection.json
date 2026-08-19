@@ -1,0 +1,173 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "TheSportsDB Events API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Events",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Next five upcoming events for a team.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/:apiKey/eventsnext.php",
+            "params": [
+              {
+                "name": "apiKey",
+                "value": "",
+                "type": "path",
+                "description": "API key path segment. The free test key is \"3\" (also documented as \"123\")."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "query",
+                "description": "Team ID (idTeam)."
+              }
+            ]
+          },
+          "docs": "Next five upcoming events for a team."
+        },
+        {
+          "info": {
+            "name": "Last five results for a team.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/:apiKey/eventslast.php",
+            "params": [
+              {
+                "name": "apiKey",
+                "value": "",
+                "type": "path",
+                "description": "API key path segment. The free test key is \"3\" (also documented as \"123\")."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "query",
+                "description": "Team ID (idTeam)."
+              }
+            ]
+          },
+          "docs": "Last five results for a team."
+        },
+        {
+          "info": {
+            "name": "Events on a specific date.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/:apiKey/eventsday.php",
+            "params": [
+              {
+                "name": "apiKey",
+                "value": "",
+                "type": "path",
+                "description": "API key path segment. The free test key is \"3\" (also documented as \"123\")."
+              },
+              {
+                "name": "d",
+                "value": "",
+                "type": "query",
+                "description": "Date of events (YYYY-MM-DD)."
+              },
+              {
+                "name": "s",
+                "value": "",
+                "type": "query",
+                "description": "Sport filter (strSport)."
+              },
+              {
+                "name": "l",
+                "value": "",
+                "type": "query",
+                "description": "League ID filter (idLeague)."
+              }
+            ]
+          },
+          "docs": "Events on a specific date."
+        },
+        {
+          "info": {
+            "name": "All events in a season for a league.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/:apiKey/eventsseason.php",
+            "params": [
+              {
+                "name": "apiKey",
+                "value": "",
+                "type": "path",
+                "description": "API key path segment. The free test key is \"3\" (also documented as \"123\")."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "query",
+                "description": "League ID (idLeague)."
+              },
+              {
+                "name": "s",
+                "value": "",
+                "type": "query",
+                "description": "Season."
+              }
+            ]
+          },
+          "docs": "All events in a season for a league."
+        },
+        {
+          "info": {
+            "name": "Video highlights of events by date, league, or sport.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/:apiKey/eventshighlights.php",
+            "params": [
+              {
+                "name": "apiKey",
+                "value": "",
+                "type": "path",
+                "description": "API key path segment. The free test key is \"3\" (also documented as \"123\")."
+              },
+              {
+                "name": "d",
+                "value": "",
+                "type": "query",
+                "description": "Date of events (YYYY-MM-DD)."
+              },
+              {
+                "name": "l",
+                "value": "",
+                "type": "query",
+                "description": "League ID (idLeague)."
+              },
+              {
+                "name": "s",
+                "value": "",
+                "type": "query",
+                "description": "Sport (strSport)."
+              }
+            ]
+          },
+          "docs": "Video highlights of events by date, league, or sport."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

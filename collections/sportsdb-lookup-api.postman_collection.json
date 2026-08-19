@@ -1,0 +1,517 @@
+{
+  "item": [
+    {
+      "id": "dd96e9df-c9ab-4fa1-b66a-60f29b8aaaa8",
+      "name": "Lookup",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4770af93-eeba-4540-a3ea-31a2defee9ee",
+          "name": "Look up league details by league ID.",
+          "request": {
+            "name": "Look up league details by league ID.",
+            "description": {},
+            "url": {
+              "path": [
+                ":apiKey",
+                "lookupleague.php"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<string>",
+                  "description": "(Required) League ID (idLeague)."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "3",
+                  "key": "apiKey",
+                  "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3b68a425-bd5f-4d93-bac4-fac49e9a7dfb",
+              "name": "League details.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":apiKey",
+                    "lookupleague.php"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "4328"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "3",
+                      "key": "apiKey",
+                      "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6dbab908-930a-4397-8d78-af58705bab64",
+          "name": "Look up team details by team ID.",
+          "request": {
+            "name": "Look up team details by team ID.",
+            "description": {},
+            "url": {
+              "path": [
+                ":apiKey",
+                "lookupteam.php"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<string>",
+                  "description": "(Required) Team ID (idTeam)."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "3",
+                  "key": "apiKey",
+                  "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a1ecfca8-bf95-479c-8f7c-8fa7151eac52",
+              "name": "Team details.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":apiKey",
+                    "lookupteam.php"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "133604"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "3",
+                      "key": "apiKey",
+                      "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d409c5d8-dba3-42e7-8435-ab9a25323404",
+          "name": "Look up player details by player ID.",
+          "request": {
+            "name": "Look up player details by player ID.",
+            "description": {},
+            "url": {
+              "path": [
+                ":apiKey",
+                "lookupplayer.php"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<string>",
+                  "description": "(Required) Player ID (idPlayer)."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "3",
+                  "key": "apiKey",
+                  "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0af61b74-55c3-4c2d-a40d-31ca9cac9282",
+              "name": "Player details.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":apiKey",
+                    "lookupplayer.php"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "34145937"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "3",
+                      "key": "apiKey",
+                      "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a2d0f939-6d52-473f-9dd7-96e14f3f8ab7",
+          "name": "Look up event details by event ID.",
+          "request": {
+            "name": "Look up event details by event ID.",
+            "description": {},
+            "url": {
+              "path": [
+                ":apiKey",
+                "lookupevent.php"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<string>",
+                  "description": "(Required) Event ID (idEvent)."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "3",
+                  "key": "apiKey",
+                  "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "82922cc5-3834-4988-85a4-f6bcfc01f7ca",
+              "name": "Event details.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":apiKey",
+                    "lookupevent.php"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "441613"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "3",
+                      "key": "apiKey",
+                      "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e4a5d2b1-df1f-47df-8765-db2e6ac7a1ab",
+          "name": "Look up venue details by venue ID.",
+          "request": {
+            "name": "Look up venue details by venue ID.",
+            "description": {},
+            "url": {
+              "path": [
+                ":apiKey",
+                "lookupvenue.php"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<string>",
+                  "description": "(Required) Venue ID (idVenue)."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "3",
+                  "key": "apiKey",
+                  "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a5493019-cdfd-449b-b60a-f8543382ec41",
+              "name": "Venue details.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":apiKey",
+                    "lookupvenue.php"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "16163"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "3",
+                      "key": "apiKey",
+                      "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.thesportsdb.com/api/v1/json",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "1e79ef29-7a53-42c4-8b84-9309955a743e",
+    "name": "TheSportsDB Events Lookup API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for TheSportsDB, an open, crowd-sourced database of sports artwork and metadata. The V1 API returns JSON for searches, lookups, leagues, players, teams, events, schedules, and video highlights, with the API key supplied as a path segment. The free test key is \"3\" (also documented as \"123\"). Premium V2 endpoints (livescores) authenticate with an API key in the X-API-KEY header.\n\nContact Support:\n Name: TheSportsDB",
+      "type": "text/plain"
+    }
+  }
+}

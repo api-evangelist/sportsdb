@@ -1,0 +1,491 @@
+{
+  "item": [
+    {
+      "id": "a08bba50-a835-4034-bb47-f0a73eea7ba8",
+      "name": "Leagues",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "332bfeb4-e75d-4f40-a903-1a885db15134",
+          "name": "Look up the league table (standings) for a league and season.",
+          "request": {
+            "name": "Look up the league table (standings) for a league and season.",
+            "description": {},
+            "url": {
+              "path": [
+                ":apiKey",
+                "lookuptable.php"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "l",
+                  "value": "<string>",
+                  "description": "(Required) League ID (idLeague)."
+                },
+                {
+                  "disabled": false,
+                  "key": "s",
+                  "value": "<string>",
+                  "description": "(Required) Season."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "3",
+                  "key": "apiKey",
+                  "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "cc7aa8c4-a3a5-446d-85bf-cd6104e06ce1",
+              "name": "League standings.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":apiKey",
+                    "lookuptable.php"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "l",
+                      "value": "4328"
+                    },
+                    {
+                      "key": "s",
+                      "value": "2020-2021"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "3",
+                      "key": "apiKey",
+                      "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2ce98f79-80a3-4be0-9e9b-d1c9bd959990",
+          "name": "List all sports.",
+          "request": {
+            "name": "List all sports.",
+            "description": {},
+            "url": {
+              "path": [
+                ":apiKey",
+                "all_sports.php"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "3",
+                  "key": "apiKey",
+                  "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fd48cb0a-985a-4fcb-8657-e3aac98a9b0e",
+              "name": "List of sports.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":apiKey",
+                    "all_sports.php"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "3",
+                      "key": "apiKey",
+                      "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e20c3c66-d31b-439d-bd21-638ba26e04bd",
+          "name": "List all countries.",
+          "request": {
+            "name": "List all countries.",
+            "description": {},
+            "url": {
+              "path": [
+                ":apiKey",
+                "all_countries.php"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "3",
+                  "key": "apiKey",
+                  "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "dc063ccb-dc64-40f9-a782-0ad42357f0bb",
+              "name": "List of countries.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":apiKey",
+                    "all_countries.php"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "3",
+                      "key": "apiKey",
+                      "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a27ce78d-4387-4dc6-ae3f-9c78a9b9d1c1",
+          "name": "List all leagues.",
+          "request": {
+            "name": "List all leagues.",
+            "description": {},
+            "url": {
+              "path": [
+                ":apiKey",
+                "all_leagues.php"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "3",
+                  "key": "apiKey",
+                  "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "00201c84-c84a-4c2e-bcdb-c2b3d608f3b7",
+              "name": "List of leagues.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":apiKey",
+                    "all_leagues.php"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "3",
+                      "key": "apiKey",
+                      "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "09ffd565-6e82-4afa-810a-9076a357118b",
+          "name": "List all seasons for a league.",
+          "request": {
+            "name": "List all seasons for a league.",
+            "description": {},
+            "url": {
+              "path": [
+                ":apiKey",
+                "search_all_seasons.php"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<string>",
+                  "description": "(Required) League ID (idLeague)."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "3",
+                  "key": "apiKey",
+                  "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "76071b9d-9a70-4b26-b7b8-17881125652f",
+              "name": "List of seasons.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":apiKey",
+                    "search_all_seasons.php"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "4328"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "3",
+                      "key": "apiKey",
+                      "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.thesportsdb.com/api/v1/json",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "65f8bf3f-75a0-4026-891b-f1c84b87da8a",
+    "name": "TheSportsDB Events Leagues API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for TheSportsDB, an open, crowd-sourced database of sports artwork and metadata. The V1 API returns JSON for searches, lookups, leagues, players, teams, events, schedules, and video highlights, with the API key supplied as a path segment. The free test key is \"3\" (also documented as \"123\"). Premium V2 endpoints (livescores) authenticate with an API key in the X-API-KEY header.\n\nContact Support:\n Name: TheSportsDB",
+      "type": "text/plain"
+    }
+  }
+}

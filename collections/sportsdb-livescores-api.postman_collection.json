@@ -1,0 +1,194 @@
+{
+  "item": [
+    {
+      "id": "a864353f-a841-483c-b7eb-f93e10d1c65d",
+      "name": "Livescores",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "1220fc6b-212a-4594-a980-6656c5820164",
+          "name": "Premium V2 livescores for a sport, updated every 2 minutes.",
+          "request": {
+            "name": "Premium V2 livescores for a sport, updated every 2 minutes.",
+            "description": {},
+            "url": {
+              "path": [
+                "livescore",
+                ":strSport"
+              ],
+              "host": [
+                "{{livescore-strSport-Url}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "strSport",
+                  "description": "(Required) Sport name (e.g. Soccer, Basketball)."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-KEY"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "37c66b0d-2969-479f-a046-b6ce4dd4ec0a",
+              "name": "Live scores for the sport.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "livescore",
+                    ":strSport"
+                  ],
+                  "host": [
+                    "{{livescore-strSport-Url}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "strSport",
+                      "description": "(Required) Sport name (e.g. Soccer, Basketball)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-KEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9afe047a-b1f1-485f-9f9d-3c8935dc3e4f",
+              "name": "Missing or invalid premium API key.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "livescore",
+                    ":strSport"
+                  ],
+                  "host": [
+                    "{{livescore-strSport-Url}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "strSport",
+                      "description": "(Required) Sport name (e.g. Soccer, Basketball)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-KEY",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.thesportsdb.com/api/v1/json",
+      "key": "baseUrl"
+    },
+    {
+      "type": "string",
+      "value": "https://www.thesportsdb.com/api/v2/json",
+      "key": "livescore-strSport-Url"
+    }
+  ],
+  "info": {
+    "_postman_id": "0bb14566-a9ae-4da5-b1ec-a800d87947f5",
+    "name": "TheSportsDB Events Livescores API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for TheSportsDB, an open, crowd-sourced database of sports artwork and metadata. The V1 API returns JSON for searches, lookups, leagues, players, teams, events, schedules, and video highlights, with the API key supplied as a path segment. The free test key is \"3\" (also documented as \"123\"). Premium V2 endpoints (livescores) authenticate with an API key in the X-API-KEY header.\n\nContact Support:\n Name: TheSportsDB",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "TheSportsDB Events Search API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Search",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search for teams by name.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/:apiKey/searchteams.php",
+            "params": [
+              {
+                "name": "apiKey",
+                "value": "",
+                "type": "path",
+                "description": "API key path segment. The free test key is \"3\" (also documented as \"123\")."
+              },
+              {
+                "name": "t",
+                "value": "",
+                "type": "query",
+                "description": "Team name to search for."
+              }
+            ]
+          },
+          "docs": "Search for teams by name."
+        },
+        {
+          "info": {
+            "name": "Search for players by name.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/:apiKey/searchplayers.php",
+            "params": [
+              {
+                "name": "apiKey",
+                "value": "",
+                "type": "path",
+                "description": "API key path segment. The free test key is \"3\" (also documented as \"123\")."
+              },
+              {
+                "name": "p",
+                "value": "",
+                "type": "query",
+                "description": "Player name to search for."
+              }
+            ]
+          },
+          "docs": "Search for players by name."
+        },
+        {
+          "info": {
+            "name": "Search for events by name.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/:apiKey/searchevents.php",
+            "params": [
+              {
+                "name": "apiKey",
+                "value": "",
+                "type": "path",
+                "description": "API key path segment. The free test key is \"3\" (also documented as \"123\")."
+              },
+              {
+                "name": "e",
+                "value": "",
+                "type": "query",
+                "description": "Event name to search for."
+              },
+              {
+                "name": "s",
+                "value": "",
+                "type": "query",
+                "description": "Season filter."
+              }
+            ]
+          },
+          "docs": "Search for events by name."
+        },
+        {
+          "info": {
+            "name": "Search for venues by name.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/:apiKey/searchvenues.php",
+            "params": [
+              {
+                "name": "apiKey",
+                "value": "",
+                "type": "path",
+                "description": "API key path segment. The free test key is \"3\" (also documented as \"123\")."
+              },
+              {
+                "name": "v",
+                "value": "",
+                "type": "query",
+                "description": "Venue name to search for."
+              }
+            ]
+          },
+          "docs": "Search for venues by name."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

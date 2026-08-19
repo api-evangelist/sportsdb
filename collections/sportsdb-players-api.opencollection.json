@@ -1,0 +1,43 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "TheSportsDB Events Players API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Players",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all players on a team.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/:apiKey/lookup_all_players.php",
+            "params": [
+              {
+                "name": "apiKey",
+                "value": "",
+                "type": "path",
+                "description": "API key path segment. The free test key is \"3\" (also documented as \"123\")."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "query",
+                "description": "Team ID (idTeam)."
+              }
+            ]
+          },
+          "docs": "List all players on a team."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

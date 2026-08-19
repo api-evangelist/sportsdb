@@ -1,0 +1,55 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "TheSportsDB Events Teams API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Teams",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all teams in a league or by sport and country.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/:apiKey/search_all_teams.php",
+            "params": [
+              {
+                "name": "apiKey",
+                "value": "",
+                "type": "path",
+                "description": "API key path segment. The free test key is \"3\" (also documented as \"123\")."
+              },
+              {
+                "name": "l",
+                "value": "",
+                "type": "query",
+                "description": "League name (strLeague)."
+              },
+              {
+                "name": "s",
+                "value": "",
+                "type": "query",
+                "description": "Sport (strSport)."
+              },
+              {
+                "name": "c",
+                "value": "",
+                "type": "query",
+                "description": "Country (strCountry)."
+              }
+            ]
+          },
+          "docs": "List all teams in a league or by sport and country."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

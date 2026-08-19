@@ -1,0 +1,43 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "TheSportsDB Events Livescores API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Livescores",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Premium V2 livescores for a sport, updated every 2 minutes.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/livescore/:strSport",
+            "params": [
+              {
+                "name": "strSport",
+                "value": "",
+                "type": "path",
+                "description": "Sport name (e.g. Soccer, Basketball)."
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-API-KEY",
+              "value": "{{X-API-KEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Premium V2 livescores for a sport, updated every 2 minutes."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

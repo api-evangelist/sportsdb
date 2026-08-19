@@ -1,0 +1,567 @@
+{
+  "item": [
+    {
+      "id": "d71591e5-e63e-4efa-820f-cbeea7dee833",
+      "name": "Events",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b09253bb-d297-45f6-9a6a-9116d8c81219",
+          "name": "Next five upcoming events for a team.",
+          "request": {
+            "name": "Next five upcoming events for a team.",
+            "description": {},
+            "url": {
+              "path": [
+                ":apiKey",
+                "eventsnext.php"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<string>",
+                  "description": "(Required) Team ID (idTeam)."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "3",
+                  "key": "apiKey",
+                  "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6c4966c9-b11d-47c5-9fd0-2ceef083cbac",
+              "name": "Upcoming events.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":apiKey",
+                    "eventsnext.php"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "133602"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "3",
+                      "key": "apiKey",
+                      "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a89d9534-08b4-4074-b038-8ffa85ce86e1",
+          "name": "Last five results for a team.",
+          "request": {
+            "name": "Last five results for a team.",
+            "description": {},
+            "url": {
+              "path": [
+                ":apiKey",
+                "eventslast.php"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<string>",
+                  "description": "(Required) Team ID (idTeam)."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "3",
+                  "key": "apiKey",
+                  "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b29b9f45-9ccc-48ea-9383-c92f4c0bdccf",
+              "name": "Recent results.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":apiKey",
+                    "eventslast.php"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "133602"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "3",
+                      "key": "apiKey",
+                      "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3ea341c6-72d7-4729-8b32-ea4f8dc4cb5a",
+          "name": "Events on a specific date.",
+          "request": {
+            "name": "Events on a specific date.",
+            "description": {},
+            "url": {
+              "path": [
+                ":apiKey",
+                "eventsday.php"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "d",
+                  "value": "<date>",
+                  "description": "(Required) Date of events (YYYY-MM-DD)."
+                },
+                {
+                  "disabled": false,
+                  "key": "s",
+                  "value": "<string>",
+                  "description": "Sport filter (strSport)."
+                },
+                {
+                  "disabled": false,
+                  "key": "l",
+                  "value": "<string>",
+                  "description": "League ID filter (idLeague)."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "3",
+                  "key": "apiKey",
+                  "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "57f3e55c-1efc-41df-bb49-bbb7e306c03d",
+              "name": "Events on the date.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":apiKey",
+                    "eventsday.php"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "d",
+                      "value": "2014-10-10"
+                    },
+                    {
+                      "key": "s",
+                      "value": "Soccer"
+                    },
+                    {
+                      "key": "l",
+                      "value": "4328"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "3",
+                      "key": "apiKey",
+                      "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bfc3b112-0fad-4bca-998c-ffe7827507d2",
+          "name": "All events in a season for a league.",
+          "request": {
+            "name": "All events in a season for a league.",
+            "description": {},
+            "url": {
+              "path": [
+                ":apiKey",
+                "eventsseason.php"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<string>",
+                  "description": "(Required) League ID (idLeague)."
+                },
+                {
+                  "disabled": false,
+                  "key": "s",
+                  "value": "<string>",
+                  "description": "Season."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "3",
+                  "key": "apiKey",
+                  "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5bb6e38b-3b52-4067-8181-a4f4465d7e60",
+              "name": "Season events.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":apiKey",
+                    "eventsseason.php"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "4328"
+                    },
+                    {
+                      "key": "s",
+                      "value": "2014-2015"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "3",
+                      "key": "apiKey",
+                      "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "44358a71-f728-45af-afb9-16b4356ac568",
+          "name": "Video highlights of events by date, league, or sport.",
+          "request": {
+            "name": "Video highlights of events by date, league, or sport.",
+            "description": {},
+            "url": {
+              "path": [
+                ":apiKey",
+                "eventshighlights.php"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "d",
+                  "value": "<date>",
+                  "description": "Date of events (YYYY-MM-DD)."
+                },
+                {
+                  "disabled": false,
+                  "key": "l",
+                  "value": "<string>",
+                  "description": "League ID (idLeague)."
+                },
+                {
+                  "disabled": false,
+                  "key": "s",
+                  "value": "<string>",
+                  "description": "Sport (strSport)."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "3",
+                  "key": "apiKey",
+                  "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8a6b989e-855b-40a6-a8d4-a94df4039e29",
+              "name": "Event highlights.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":apiKey",
+                    "eventshighlights.php"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "d",
+                      "value": "2023-12-09"
+                    },
+                    {
+                      "key": "l",
+                      "value": "4328"
+                    },
+                    {
+                      "key": "s",
+                      "value": "Soccer"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "3",
+                      "key": "apiKey",
+                      "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.thesportsdb.com/api/v1/json",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "cc99768a-46d0-4d53-b3e1-c2ce7c72bbb0",
+    "name": "TheSportsDB Events API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for TheSportsDB, an open, crowd-sourced database of sports artwork and metadata. The V1 API returns JSON for searches, lookups, leagues, players, teams, events, schedules, and video highlights, with the API key supplied as a path segment. The free test key is \"3\" (also documented as \"123\"). Premium V2 endpoints (livescores) authenticate with an API key in the X-API-KEY header.\n\nContact Support:\n Name: TheSportsDB",
+      "type": "text/plain"
+    }
+  }
+}

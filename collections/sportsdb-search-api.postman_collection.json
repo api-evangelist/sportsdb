@@ -1,0 +1,430 @@
+{
+  "item": [
+    {
+      "id": "8c911793-71a0-481d-9331-97bdae09b478",
+      "name": "Search",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6b1bd5e4-85d0-440d-8e0e-766b77129a8f",
+          "name": "Search for teams by name.",
+          "request": {
+            "name": "Search for teams by name.",
+            "description": {},
+            "url": {
+              "path": [
+                ":apiKey",
+                "searchteams.php"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "t",
+                  "value": "<string>",
+                  "description": "(Required) Team name to search for."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "3",
+                  "key": "apiKey",
+                  "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f47e2f9a-83dd-4472-96c0-e08ed7a68288",
+              "name": "Matching teams.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":apiKey",
+                    "searchteams.php"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "t",
+                      "value": "Arsenal"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "3",
+                      "key": "apiKey",
+                      "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8d8b3f6c-ce60-4348-add6-5e051e9fbc97",
+          "name": "Search for players by name.",
+          "request": {
+            "name": "Search for players by name.",
+            "description": {},
+            "url": {
+              "path": [
+                ":apiKey",
+                "searchplayers.php"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "p",
+                  "value": "<string>",
+                  "description": "(Required) Player name to search for."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "3",
+                  "key": "apiKey",
+                  "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "21266286-63ff-4538-aa52-7a51bf0813fc",
+              "name": "Matching players.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":apiKey",
+                    "searchplayers.php"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "p",
+                      "value": "Danny Welbeck"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "3",
+                      "key": "apiKey",
+                      "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6dea0411-5ebd-4611-961b-0b491b014c37",
+          "name": "Search for events by name.",
+          "request": {
+            "name": "Search for events by name.",
+            "description": {},
+            "url": {
+              "path": [
+                ":apiKey",
+                "searchevents.php"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "e",
+                  "value": "<string>",
+                  "description": "(Required) Event name to search for."
+                },
+                {
+                  "disabled": false,
+                  "key": "s",
+                  "value": "<string>",
+                  "description": "Season filter."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "3",
+                  "key": "apiKey",
+                  "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d223aa33-a30a-46fe-b265-f9f59a645e2b",
+              "name": "Matching events.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":apiKey",
+                    "searchevents.php"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "e",
+                      "value": "Arsenal_vs_Chelsea"
+                    },
+                    {
+                      "key": "s",
+                      "value": "2016-2017"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "3",
+                      "key": "apiKey",
+                      "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ac5f421b-b243-429b-8eaa-4eccc6dec2e5",
+          "name": "Search for venues by name.",
+          "request": {
+            "name": "Search for venues by name.",
+            "description": {},
+            "url": {
+              "path": [
+                ":apiKey",
+                "searchvenues.php"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "v",
+                  "value": "<string>",
+                  "description": "(Required) Venue name to search for."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "3",
+                  "key": "apiKey",
+                  "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2e093050-847d-40c7-9d34-8a38e59c814a",
+              "name": "Matching venues.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":apiKey",
+                    "searchvenues.php"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "v",
+                      "value": "Wembley"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "3",
+                      "key": "apiKey",
+                      "description": "(Required) API key path segment. The free test key is \"3\" (also documented as \"123\")."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.thesportsdb.com/api/v1/json",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "d4df541a-2635-4bd7-92b9-84d5673db1d6",
+    "name": "TheSportsDB Events Search API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for TheSportsDB, an open, crowd-sourced database of sports artwork and metadata. The V1 API returns JSON for searches, lookups, leagues, players, teams, events, schedules, and video highlights, with the API key supplied as a path segment. The free test key is \"3\" (also documented as \"123\"). Premium V2 endpoints (livescores) authenticate with an API key in the X-API-KEY header.\n\nContact Support:\n Name: TheSportsDB",
+      "type": "text/plain"
+    }
+  }
+}

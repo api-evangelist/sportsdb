@@ -1,0 +1,131 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "TheSportsDB Events Leagues API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Leagues",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Look up the league table (standings) for a league and season.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/:apiKey/lookuptable.php",
+            "params": [
+              {
+                "name": "apiKey",
+                "value": "",
+                "type": "path",
+                "description": "API key path segment. The free test key is \"3\" (also documented as \"123\")."
+              },
+              {
+                "name": "l",
+                "value": "",
+                "type": "query",
+                "description": "League ID (idLeague)."
+              },
+              {
+                "name": "s",
+                "value": "",
+                "type": "query",
+                "description": "Season."
+              }
+            ]
+          },
+          "docs": "Look up the league table (standings) for a league and season."
+        },
+        {
+          "info": {
+            "name": "List all sports.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/:apiKey/all_sports.php",
+            "params": [
+              {
+                "name": "apiKey",
+                "value": "",
+                "type": "path",
+                "description": "API key path segment. The free test key is \"3\" (also documented as \"123\")."
+              }
+            ]
+          },
+          "docs": "List all sports."
+        },
+        {
+          "info": {
+            "name": "List all countries.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/:apiKey/all_countries.php",
+            "params": [
+              {
+                "name": "apiKey",
+                "value": "",
+                "type": "path",
+                "description": "API key path segment. The free test key is \"3\" (also documented as \"123\")."
+              }
+            ]
+          },
+          "docs": "List all countries."
+        },
+        {
+          "info": {
+            "name": "List all leagues.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/:apiKey/all_leagues.php",
+            "params": [
+              {
+                "name": "apiKey",
+                "value": "",
+                "type": "path",
+                "description": "API key path segment. The free test key is \"3\" (also documented as \"123\")."
+              }
+            ]
+          },
+          "docs": "List all leagues."
+        },
+        {
+          "info": {
+            "name": "List all seasons for a league.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/:apiKey/search_all_seasons.php",
+            "params": [
+              {
+                "name": "apiKey",
+                "value": "",
+                "type": "path",
+                "description": "API key path segment. The free test key is \"3\" (also documented as \"123\")."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "query",
+                "description": "League ID (idLeague)."
+              }
+            ]
+          },
+          "docs": "List all seasons for a league."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

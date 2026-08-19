@@ -1,0 +1,143 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "TheSportsDB Events Lookup API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Lookup",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Look up league details by league ID.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/:apiKey/lookupleague.php",
+            "params": [
+              {
+                "name": "apiKey",
+                "value": "",
+                "type": "path",
+                "description": "API key path segment. The free test key is \"3\" (also documented as \"123\")."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "query",
+                "description": "League ID (idLeague)."
+              }
+            ]
+          },
+          "docs": "Look up league details by league ID."
+        },
+        {
+          "info": {
+            "name": "Look up team details by team ID.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/:apiKey/lookupteam.php",
+            "params": [
+              {
+                "name": "apiKey",
+                "value": "",
+                "type": "path",
+                "description": "API key path segment. The free test key is \"3\" (also documented as \"123\")."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "query",
+                "description": "Team ID (idTeam)."
+              }
+            ]
+          },
+          "docs": "Look up team details by team ID."
+        },
+        {
+          "info": {
+            "name": "Look up player details by player ID.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/:apiKey/lookupplayer.php",
+            "params": [
+              {
+                "name": "apiKey",
+                "value": "",
+                "type": "path",
+                "description": "API key path segment. The free test key is \"3\" (also documented as \"123\")."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "query",
+                "description": "Player ID (idPlayer)."
+              }
+            ]
+          },
+          "docs": "Look up player details by player ID."
+        },
+        {
+          "info": {
+            "name": "Look up event details by event ID.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/:apiKey/lookupevent.php",
+            "params": [
+              {
+                "name": "apiKey",
+                "value": "",
+                "type": "path",
+                "description": "API key path segment. The free test key is \"3\" (also documented as \"123\")."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "query",
+                "description": "Event ID (idEvent)."
+              }
+            ]
+          },
+          "docs": "Look up event details by event ID."
+        },
+        {
+          "info": {
+            "name": "Look up venue details by venue ID.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.thesportsdb.com/api/v1/json/:apiKey/lookupvenue.php",
+            "params": [
+              {
+                "name": "apiKey",
+                "value": "",
+                "type": "path",
+                "description": "API key path segment. The free test key is \"3\" (also documented as \"123\")."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "query",
+                "description": "Venue ID (idVenue)."
+              }
+            ]
+          },
+          "docs": "Look up venue details by venue ID."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
