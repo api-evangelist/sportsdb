@@ -24,6 +24,12 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sportsdb.p
 tags:
 - Sports
 - Sports Data
+- Team
+- Players
+- Event
+tags_raw:
+- Sports
+- Sports Data
 - Teams
 - Players
 - Events
@@ -37,6 +43,8 @@ apis:
   humanURL: https://www.thesportsdb.com/documentation
   baseURL: https://www.thesportsdb.com/api/v1/json
   tags:
+  - Event
+  tags_raw:
   - Events
   properties:
   - type: OpenAPI
@@ -73,6 +81,8 @@ apis:
   humanURL: https://www.thesportsdb.com/documentation
   baseURL: https://www.thesportsdb.com/api/v1/json
   tags:
+  - Live Scores
+  tags_raw:
   - Livescores
   properties:
   - type: OpenAPI
@@ -145,6 +155,8 @@ apis:
   humanURL: https://www.thesportsdb.com/documentation
   baseURL: https://www.thesportsdb.com/api/v1/json
   tags:
+  - Team
+  tags_raw:
   - Teams
   properties:
   - type: OpenAPI
