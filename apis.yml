@@ -7,6 +7,18 @@ description: TheSportsDB is an open, crowd-sourced database of sports artwork an
   events, venues, schedules, and season standings across soccer, basketball, baseball,
   American football, hockey, tennis, and many other sports worldwide, with premium
   V2 livescores and video highlights for supporters.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
