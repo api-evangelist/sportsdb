@@ -93,7 +93,7 @@ apis:
   humanURL: https://www.thesportsdb.com/documentation
   baseURL: https://www.thesportsdb.com/api/v1/json
   tags:
-  - Livescores
+  - Live Scores
   tags_raw:
   - Livescores
   properties:
