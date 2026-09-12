@@ -2,11 +2,7 @@ aid: sportsdb
 url: https://raw.githubusercontent.com/api-evangelist/sportsdb/refs/heads/main/apis.yml
 name: TheSportsDB
 kind: company
-description: TheSportsDB is an open, crowd-sourced database of sports artwork and
-  metadata with a free REST API in JSON. It provides data on leagues, teams, players,
-  events, venues, schedules, and season standings across soccer, basketball, baseball,
-  American football, hockey, tennis, and many other sports worldwide, with premium
-  V2 livescores and video highlights for supporters.
+description: TheSportsDB is an open, crowd-sourced database of sports artwork and metadata with a free REST API in JSON. It provides data on leagues, teams, players, events, venues, schedules, and season standings across soccer, basketball, baseball, American football, hockey, tennis, and many other sports worldwide, with premium V2 livescores and video highlights for supporters.
 deliveryModel:
   model: saas
   open_source: false
@@ -182,6 +178,56 @@ apis:
     url: collections/sportsdb.postman_collection.json
   - type: OpenCollection
     url: collections/sportsdb.opencollection.json
+- aid: sportsdb:thesportsdb-lists-api
+  name: TheSportsDB Lists API
+  description: List leagues, teams, players, and events.
+  humanURL: https://www.thesportsdb.com/
+  baseURL: https://www.thesportsdb.com/api/v1/json/3
+  tags:
+  - List
+  tags_raw:
+  - Lists
+  properties:
+  - type: OpenAPI
+    url: openapi/thesportsdb-lists-api-openapi.yml
+  - type: Documentation
+    url: https://www.thesportsdb.com/documentation
+  - type: Website
+    url: https://www.thesportsdb.com/
+  - type: JSONSchema
+    url: json-schema/thesportsdb-team-schema.json
+  - type: JSONLD
+    url: json-ld/thesportsdb-context.jsonld
+  - type: JSONStructure
+    url: json-structure/thesportsdb-structure.json
+  - type: SpectralRules
+    url: rules/thesportsdb-rules.yml
+  - type: Vocabulary
+    url: vocabulary/thesportsdb-vocabulary.yml
+- aid: sportsdb:thesportsdb-seasons-api
+  name: TheSportsDB Seasons API
+  description: Season standings and results.
+  humanURL: https://www.thesportsdb.com/
+  baseURL: https://www.thesportsdb.com/api/v1/json/3
+  tags:
+  - Seasons
+  properties:
+  - type: OpenAPI
+    url: openapi/thesportsdb-seasons-api-openapi.yml
+  - type: Documentation
+    url: https://www.thesportsdb.com/documentation
+  - type: Website
+    url: https://www.thesportsdb.com/
+  - type: JSONSchema
+    url: json-schema/thesportsdb-team-schema.json
+  - type: JSONLD
+    url: json-ld/thesportsdb-context.jsonld
+  - type: JSONStructure
+    url: json-structure/thesportsdb-structure.json
+  - type: SpectralRules
+    url: rules/thesportsdb-rules.yml
+  - type: Vocabulary
+    url: vocabulary/thesportsdb-vocabulary.yml
 common:
 - type: AgenticAccess
   url: agentic-access/sportsdb-agentic-access.yml
