@@ -178,18 +178,16 @@ apis:
     url: collections/sportsdb.postman_collection.json
   - type: OpenCollection
     url: collections/sportsdb.opencollection.json
-- aid: sportsdb:thesportsdb-lists-api
+- aid: sportsdb:sportsdb-lists-api
   name: TheSportsDB Lists API
   description: List leagues, teams, players, and events.
-  humanURL: https://www.thesportsdb.com/
-  baseURL: https://www.thesportsdb.com/api/v1/json/3
+  humanURL: https://www.thesportsdb.com/documentation
+  baseURL: https://www.thesportsdb.com/api/v1/json
   tags:
-  - List
-  tags_raw:
   - Lists
   properties:
   - type: OpenAPI
-    url: openapi/thesportsdb-lists-api-openapi.yml
+    url: openapi/sportsdb-lists-api-openapi.yml
   - type: Documentation
     url: https://www.thesportsdb.com/documentation
   - type: Website
@@ -204,16 +202,16 @@ apis:
     url: rules/thesportsdb-rules.yml
   - type: Vocabulary
     url: vocabulary/thesportsdb-vocabulary.yml
-- aid: sportsdb:thesportsdb-seasons-api
+- aid: sportsdb:sportsdb-seasons-api
   name: TheSportsDB Seasons API
   description: Season standings and results.
-  humanURL: https://www.thesportsdb.com/
-  baseURL: https://www.thesportsdb.com/api/v1/json/3
+  humanURL: https://www.thesportsdb.com/documentation
+  baseURL: https://www.thesportsdb.com/api/v1/json
   tags:
   - Seasons
   properties:
   - type: OpenAPI
-    url: openapi/thesportsdb-seasons-api-openapi.yml
+    url: openapi/sportsdb-seasons-api-openapi.yml
   - type: Documentation
     url: https://www.thesportsdb.com/documentation
   - type: Website
