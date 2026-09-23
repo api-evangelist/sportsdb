@@ -1,6 +1,6 @@
-openapi: 3.0.1
+openapi: 3.2.0
 info:
-  title: TheSportsDB Events Leagues API
+  title: TheSportsDB Leagues API
   description: REST API for TheSportsDB, an open, crowd-sourced database of sports artwork and metadata. The V1 API returns JSON for searches, lookups, leagues, players, teams, events, schedules, and video highlights, with the API key supplied as a path segment. The free test key is "3" (also documented as "123"). Premium V2 endpoints (livescores) authenticate with an API key in the X-API-KEY header.
   termsOfService: https://www.thesportsdb.com/
   contact:
@@ -18,7 +18,7 @@ paths:
       operationId: lookupTable
       tags:
       - Leagues
-      summary: Look up the league table (standings) for a league and season.
+      summary: Look up the league table (standings) for a league and season
       parameters:
       - $ref: '#/components/parameters/ApiKey'
       - name: l
@@ -47,7 +47,7 @@ paths:
       operationId: allSports
       tags:
       - Leagues
-      summary: List all sports.
+      summary: List all sports
       parameters:
       - $ref: '#/components/parameters/ApiKey'
       responses:
@@ -62,7 +62,7 @@ paths:
       operationId: allCountries
       tags:
       - Leagues
-      summary: List all countries.
+      summary: List all countries
       parameters:
       - $ref: '#/components/parameters/ApiKey'
       responses:
@@ -77,7 +77,7 @@ paths:
       operationId: allLeagues
       tags:
       - Leagues
-      summary: List all leagues.
+      summary: List all leagues
       parameters:
       - $ref: '#/components/parameters/ApiKey'
       responses:
@@ -92,7 +92,7 @@ paths:
       operationId: searchAllSeasons
       tags:
       - Leagues
-      summary: List all seasons for a league.
+      summary: List all seasons for a league
       parameters:
       - $ref: '#/components/parameters/ApiKey'
       - name: id

@@ -1,6 +1,6 @@
-openapi: 3.0.1
+openapi: 3.2.0
 info:
-  title: TheSportsDB Events Search API
+  title: TheSportsDB Search API
   description: REST API for TheSportsDB, an open, crowd-sourced database of sports artwork and metadata. The V1 API returns JSON for searches, lookups, leagues, players, teams, events, schedules, and video highlights, with the API key supplied as a path segment. The free test key is "3" (also documented as "123"). Premium V2 endpoints (livescores) authenticate with an API key in the X-API-KEY header.
   termsOfService: https://www.thesportsdb.com/
   contact:
@@ -18,7 +18,7 @@ paths:
       operationId: searchTeams
       tags:
       - Search
-      summary: Search for teams by name.
+      summary: Search for teams by name
       parameters:
       - $ref: '#/components/parameters/ApiKey'
       - name: t
@@ -40,7 +40,7 @@ paths:
       operationId: searchPlayers
       tags:
       - Search
-      summary: Search for players by name.
+      summary: Search for players by name
       parameters:
       - $ref: '#/components/parameters/ApiKey'
       - name: p
@@ -62,7 +62,7 @@ paths:
       operationId: searchEvents
       tags:
       - Search
-      summary: Search for events by name.
+      summary: Search for events by name
       parameters:
       - $ref: '#/components/parameters/ApiKey'
       - name: e
@@ -91,7 +91,7 @@ paths:
       operationId: searchVenues
       tags:
       - Search
-      summary: Search for venues by name.
+      summary: Search for venues by name
       parameters:
       - $ref: '#/components/parameters/ApiKey'
       - name: v

@@ -1,4 +1,4 @@
-openapi: 3.0.1
+openapi: 3.2.0
 info:
   title: TheSportsDB Events API
   description: REST API for TheSportsDB, an open, crowd-sourced database of sports artwork and metadata. The V1 API returns JSON for searches, lookups, leagues, players, teams, events, schedules, and video highlights, with the API key supplied as a path segment. The free test key is "3" (also documented as "123"). Premium V2 endpoints (livescores) authenticate with an API key in the X-API-KEY header.
@@ -18,7 +18,7 @@ paths:
       operationId: eventsNext
       tags:
       - Events
-      summary: Next five upcoming events for a team.
+      summary: Next five upcoming events for a team
       parameters:
       - $ref: '#/components/parameters/ApiKey'
       - name: id
@@ -40,7 +40,7 @@ paths:
       operationId: eventsLast
       tags:
       - Events
-      summary: Last five results for a team.
+      summary: Last five results for a team
       parameters:
       - $ref: '#/components/parameters/ApiKey'
       - name: id
@@ -62,7 +62,7 @@ paths:
       operationId: eventsDay
       tags:
       - Events
-      summary: Events on a specific date.
+      summary: Events on a specific date
       parameters:
       - $ref: '#/components/parameters/ApiKey'
       - name: d
@@ -99,7 +99,7 @@ paths:
       operationId: eventsSeason
       tags:
       - Events
-      summary: All events in a season for a league.
+      summary: All events in a season for a league
       parameters:
       - $ref: '#/components/parameters/ApiKey'
       - name: id
@@ -128,7 +128,7 @@ paths:
       operationId: eventsHighlights
       tags:
       - Events
-      summary: Video highlights of events by date, league, or sport.
+      summary: Video highlights of events by date, league, or sport
       parameters:
       - $ref: '#/components/parameters/ApiKey'
       - name: d

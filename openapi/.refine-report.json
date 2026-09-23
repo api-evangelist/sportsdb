@@ -1,13 +1,9 @@
 {
   "provider": "sportsdb",
   "sources": [
-    "sportsdb-events-api-openapi.yml",
-    "sportsdb-leagues-api-openapi.yml",
-    "sportsdb-livescores-api-openapi.yml",
-    "sportsdb-lookup-api-openapi.yml",
-    "sportsdb-players-api-openapi.yml",
-    "sportsdb-search-api-openapi.yml",
-    "sportsdb-teams-api-openapi.yml"
+    "_original/sportsdb-openapi.yml",
+    "_original/thesportsdb-lists-api-openapi.yml",
+    "_original/thesportsdb-seasons-api-openapi.yml"
   ],
   "outputs": [
     "sportsdb-events-api-openapi.yml",
@@ -16,11 +12,34 @@
     "sportsdb-lookup-api-openapi.yml",
     "sportsdb-players-api-openapi.yml",
     "sportsdb-search-api-openapi.yml",
-    "sportsdb-teams-api-openapi.yml"
+    "sportsdb-teams-api-openapi.yml",
+    "sportsdb-lists-api-openapi.yml",
+    "sportsdb-seasons-api-openapi.yml"
   ],
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (3 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "sportsdb-openapi.yml: upgraded openapi 3.0.1 -> OpenAPI 3.2.0",
+    "sportsdb-openapi.yml: declared missing tag: Events",
+    "sportsdb-openapi.yml: declared missing tag: Leagues",
+    "sportsdb-openapi.yml: declared missing tag: Livescores",
+    "sportsdb-openapi.yml: declared missing tag: Lookup",
+    "sportsdb-openapi.yml: declared missing tag: Players",
+    "sportsdb-openapi.yml: declared missing tag: Search",
+    "sportsdb-openapi.yml: declared missing tag: Teams",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "sportsdb-events-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sportsdb-leagues-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sportsdb-lists-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sportsdb-livescores-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sportsdb-lookup-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sportsdb-players-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sportsdb-search-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sportsdb-seasons-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sportsdb-teams-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
