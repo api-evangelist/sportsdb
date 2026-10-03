@@ -112,6 +112,30 @@ components:
         strLogo:
           type: string
           description: URL to league logo.
+    TeamsResponse:
+      type: object
+      properties:
+        teams:
+          type: array
+          nullable: true
+          items:
+            $ref: '#/components/schemas/Team'
+    SportsResponse:
+      type: object
+      properties:
+        sports:
+          type: array
+          items:
+            $ref: '#/components/schemas/Sport'
+    Sport:
+      type: object
+      properties:
+        idSport:
+          type: string
+        strSport:
+          type: string
+        strSportThumb:
+          type: string
     LeaguesResponse:
       type: object
       properties:
@@ -188,27 +212,3 @@ components:
         strSport:
           type: string
           description: Sport type.
-    Sport:
-      type: object
-      properties:
-        idSport:
-          type: string
-        strSport:
-          type: string
-        strSportThumb:
-          type: string
-    SportsResponse:
-      type: object
-      properties:
-        sports:
-          type: array
-          items:
-            $ref: '#/components/schemas/Sport'
-    TeamsResponse:
-      type: object
-      properties:
-        teams:
-          type: array
-          nullable: true
-          items:
-            $ref: '#/components/schemas/Team'

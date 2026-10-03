@@ -100,48 +100,28 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Season'
-    TableRow:
-      type: object
-      properties:
-        name:
-          type: string
-          description: Team name.
-        teamid:
-          type: string
-          description: Team ID.
-        played:
-          type: string
-          description: Games played.
-        win:
-          type: string
-          description: Wins.
-        loss:
-          type: string
-          description: Losses.
-        draw:
-          type: string
-          description: Draws.
-        goalsfor:
-          type: string
-          description: Goals scored.
-        goalsagainst:
-          type: string
-          description: Goals conceded.
-        goalsdifference:
-          type: string
-          description: Goal difference.
-        total:
-          type: string
-          description: Total points.
-        badge:
-          type: string
-          description: URL to team badge.
     Season:
       type: object
       properties:
         strSeason:
           type: string
           description: Season identifier (e.g., 2026-2027).
+    TableResponse:
+      type: object
+      properties:
+        table:
+          type: array
+          nullable: true
+          items:
+            $ref: '#/components/schemas/TableRow'
+    EventsResponse:
+      type: object
+      properties:
+        events:
+          type: array
+          nullable: true
+          items:
+            $ref: '#/components/schemas/Event'
     Event:
       type: object
       properties:
@@ -190,19 +170,39 @@ components:
         strThumb:
           type: string
           description: URL to event banner/thumb image.
-    EventsResponse:
+    TableRow:
       type: object
       properties:
-        events:
-          type: array
-          nullable: true
-          items:
-            $ref: '#/components/schemas/Event'
-    TableResponse:
-      type: object
-      properties:
-        table:
-          type: array
-          nullable: true
-          items:
-            $ref: '#/components/schemas/TableRow'
+        name:
+          type: string
+          description: Team name.
+        teamid:
+          type: string
+          description: Team ID.
+        played:
+          type: string
+          description: Games played.
+        win:
+          type: string
+          description: Wins.
+        loss:
+          type: string
+          description: Losses.
+        draw:
+          type: string
+          description: Draws.
+        goalsfor:
+          type: string
+          description: Goals scored.
+        goalsagainst:
+          type: string
+          description: Goals conceded.
+        goalsdifference:
+          type: string
+          description: Goal difference.
+        total:
+          type: string
+          description: Total points.
+        badge:
+          type: string
+          description: URL to team badge.
