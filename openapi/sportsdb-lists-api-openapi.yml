@@ -79,6 +79,19 @@ paths:
                 $ref: '#/components/schemas/TeamsResponse'
 components:
   schemas:
+    LeaguesResponse:
+      type: object
+      properties:
+        leagues:
+          type: array
+          nullable: true
+          items:
+            $ref: '#/components/schemas/League'
+        countries:
+          type: array
+          nullable: true
+          items:
+            $ref: '#/components/schemas/League'
     League:
       type: object
       properties:
@@ -120,35 +133,6 @@ components:
           nullable: true
           items:
             $ref: '#/components/schemas/Team'
-    SportsResponse:
-      type: object
-      properties:
-        sports:
-          type: array
-          items:
-            $ref: '#/components/schemas/Sport'
-    Sport:
-      type: object
-      properties:
-        idSport:
-          type: string
-        strSport:
-          type: string
-        strSportThumb:
-          type: string
-    LeaguesResponse:
-      type: object
-      properties:
-        leagues:
-          type: array
-          nullable: true
-          items:
-            $ref: '#/components/schemas/League'
-        countries:
-          type: array
-          nullable: true
-          items:
-            $ref: '#/components/schemas/League'
     Team:
       type: object
       properties:
@@ -212,3 +196,19 @@ components:
         strSport:
           type: string
           description: Sport type.
+    Sport:
+      type: object
+      properties:
+        idSport:
+          type: string
+        strSport:
+          type: string
+        strSportThumb:
+          type: string
+    SportsResponse:
+      type: object
+      properties:
+        sports:
+          type: array
+          items:
+            $ref: '#/components/schemas/Sport'
