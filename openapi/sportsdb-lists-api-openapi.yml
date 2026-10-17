@@ -79,19 +79,6 @@ paths:
                 $ref: '#/components/schemas/TeamsResponse'
 components:
   schemas:
-    LeaguesResponse:
-      type: object
-      properties:
-        leagues:
-          type: array
-          nullable: true
-          items:
-            $ref: '#/components/schemas/League'
-        countries:
-          type: array
-          nullable: true
-          items:
-            $ref: '#/components/schemas/League'
     League:
       type: object
       properties:
@@ -125,14 +112,6 @@ components:
         strLogo:
           type: string
           description: URL to league logo.
-    TeamsResponse:
-      type: object
-      properties:
-        teams:
-          type: array
-          nullable: true
-          items:
-            $ref: '#/components/schemas/Team'
     Team:
       type: object
       properties:
@@ -196,6 +175,21 @@ components:
         strSport:
           type: string
           description: Sport type.
+    TeamsResponse:
+      type: object
+      properties:
+        teams:
+          type: array
+          nullable: true
+          items:
+            $ref: '#/components/schemas/Team'
+    SportsResponse:
+      type: object
+      properties:
+        sports:
+          type: array
+          items:
+            $ref: '#/components/schemas/Sport'
     Sport:
       type: object
       properties:
@@ -205,10 +199,16 @@ components:
           type: string
         strSportThumb:
           type: string
-    SportsResponse:
+    LeaguesResponse:
       type: object
       properties:
-        sports:
+        leagues:
           type: array
+          nullable: true
           items:
-            $ref: '#/components/schemas/Sport'
+            $ref: '#/components/schemas/League'
+        countries:
+          type: array
+          nullable: true
+          items:
+            $ref: '#/components/schemas/League'

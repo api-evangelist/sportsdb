@@ -93,50 +93,14 @@ paths:
                 $ref: '#/components/schemas/SeasonsResponse'
 components:
   schemas:
-    TableRow:
+    TableResponse:
       type: object
       properties:
-        name:
-          type: string
-          description: Team name.
-        teamid:
-          type: string
-          description: Team ID.
-        played:
-          type: string
-          description: Games played.
-        win:
-          type: string
-          description: Wins.
-        loss:
-          type: string
-          description: Losses.
-        draw:
-          type: string
-          description: Draws.
-        goalsfor:
-          type: string
-          description: Goals scored.
-        goalsagainst:
-          type: string
-          description: Goals conceded.
-        goalsdifference:
-          type: string
-          description: Goal difference.
-        total:
-          type: string
-          description: Total points.
-        badge:
-          type: string
-          description: URL to team badge.
-    EventsResponse:
-      type: object
-      properties:
-        events:
+        table:
           type: array
           nullable: true
           items:
-            $ref: '#/components/schemas/Event'
+            $ref: '#/components/schemas/TableRow'
     Event:
       type: object
       properties:
@@ -191,6 +155,42 @@ components:
         strSeason:
           type: string
           description: Season identifier (e.g., 2026-2027).
+    TableRow:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Team name.
+        teamid:
+          type: string
+          description: Team ID.
+        played:
+          type: string
+          description: Games played.
+        win:
+          type: string
+          description: Wins.
+        loss:
+          type: string
+          description: Losses.
+        draw:
+          type: string
+          description: Draws.
+        goalsfor:
+          type: string
+          description: Goals scored.
+        goalsagainst:
+          type: string
+          description: Goals conceded.
+        goalsdifference:
+          type: string
+          description: Goal difference.
+        total:
+          type: string
+          description: Total points.
+        badge:
+          type: string
+          description: URL to team badge.
     SeasonsResponse:
       type: object
       properties:
@@ -198,11 +198,11 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Season'
-    TableResponse:
+    EventsResponse:
       type: object
       properties:
-        table:
+        events:
           type: array
           nullable: true
           items:
-            $ref: '#/components/schemas/TableRow'
+            $ref: '#/components/schemas/Event'
